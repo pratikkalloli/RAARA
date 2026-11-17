@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#102b3a" />
+    <title>RAARA — Academic Policy Assistant</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="RAARA home"><span class="brand-mark">R</span><span>RAARA</span></a>
+      <div class="topbar-meta"><span class="offline-dot"></span><span>Local offline demonstration</span><span id="connection-status" class="connection-status">Connecting…</span></div>
+    </header>
+    <main id="top" class="shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">RETRIEVAL-AUGMENTED ACADEMIC REGULATED ASSISTANT</p>
+          <h1>Academic Policy Assistant</h1>
+          <p class="hero-subtitle">Evidence-grounded academic policy retrieval and demonstration system.</p>
+        </div>
+        <div class="hero-seal" aria-hidden="true"><span>RA</span><small>LOCAL<br />DEMO</small></div>
+      </section>
+      <aside class="notice" role="note"><span class="notice-icon">i</span><p><strong>Demonstration notice</strong><br />This demonstration uses project-authored generic academic policies. It is not an official PES University policy service.</p></aside>
+
+      <section class="dashboard-section" aria-labelledby="dashboard-title">
+        <div class="section-heading"><div><p class="eyebrow">AT A GLANCE</p><h2 id="dashboard-title">Evaluation dashboard</h2></div><span class="muted" id="dashboard-label">Loading local corpus…</span></div>
+        <div class="stat-grid" id="stats" aria-live="polite"><div class="stat-card skeleton"></div><div class="stat-card skeleton"></div><div class="stat-card skeleton"></div><div class="stat-card skeleton"></div></div>
+        <p class="metric-note" id="metric-note">Evaluation figures are computed from the existing demonstration questions. They are not official-policy accuracy metrics.</p>
+      </section>
+
+      <div class="main-grid">
+        <section class="panel ask-panel" aria-labelledby="ask-title">
+          <div class="section-heading compact"><div><p class="eyebrow">ASK RAARA</p><h2 id="ask-title">Ask an academic question</h2></div><span class="tag">Project corpus</span></div>
+          <form id="ask-form">
+            <label class="visually-hidden" for="question-input">Your academic question</label>
+            <textarea id="question-input" rows="3" maxlength="2000" placeholder="For example: What is the illustrative minimum attendance?" required></textarea>
+            <div class="form-actions"><span class="muted">Answers are generated locally from this demo corpus.</span><div><button type="button" class="button button-quiet" id="clear-question">Clear</button><button class="button button-primary" id="ask-submit" type="submit">Ask RAARA <span aria-hidden="true">→</span></button></div></div>
+          </form>
+          <p id="ask-error" class="error-message" role="alert" hidden></p>
+          <div id="answer-area" class="answer-area empty-state"><span class="empty-icon">✳</span><p>Your answer, cited evidence and provenance will appear here.</p></div>
+          <section class="examples-block" aria-labelledby="examples-title"><div class="examples-head"><h3 id="examples-title">Try an example question</h3><span class="muted">From the 30-question dataset</span></div><div id="example-groups" class="example-groups"><p class="muted">Loading questions…</p></div></section>
+        </section>
+
+        <aside class="panel tour-panel" aria-labelledby="tour-title">
+          <p class="eyebrow">FIVE-MINUTE WALKTHROUGH</p><h2 id="tour-title">Examiner demonstration</h2>
+          <p class="muted">Run five fixed scenarios through the Stage 4 pipeline. Expected outcomes come from the project brief and existing dataset; observed outcomes are shown as returned.</p>
+          <button id="run-tour" class="button button-outline button-full" type="button">Run the five cases <span aria-hidden="true">↗</span></button>
+          <div id="tour-results" class="tour-results" aria-live="polite"><p class="muted">The walkthrough has not been run in this session.</p></div>
+        </aside>
+      </div>
+
+      <section class="panel calculator-panel" aria-labelledby="calculator-title">
+        <div class="section-heading compact"><div><p class="eyebrow">ILLUSTRATIVE ONLY</p><h2 id="calculator-title">Calculation demonstrations</h2></div><span class="muted">Assumptions loaded from the validated dataset</span></div>
+        <div class="calculator-grid">
+          <form class="calc-card" data-calculation="attendance"><h3>Attendance percentage</h3><p>Attended classes divided by classes held.</p><label>Classes attended<input name="attended" type="number" min="0" step="1" value="72" required /></label><label>Classes held<input name="held" type="number" min="1" step="1" value="90" required /></label><button class="button button-small" type="submit">Calculate</button></form>
+          <form class="calc-card" data-calculation="course_total"><h3>Weighted course total</h3><p>Uses the example weights stored in the dataset.</p><label>Internal score / 100<input name="internal_score" type="number" min="0" max="100" step="any" value="34" required /></label><label>End-semester score / 100<input name="exam_score" type="number" min="0" max="100" step="any" value="52" required /></label><button class="button button-small" type="submit">Calculate</button></form>
+          <form class="calc-card" data-calculation="sgpa"><h3>SGPA</h3><p>Add course credit and grade-point pairs.</p><div class="pair-list" data-pairs><div class="pair-row"><label>Credits<input data-credit type="number" min="0.01" step="any" value="4" required /></label><label>Grade points<input data-grade type="number" min="0" step="any" value="9" required /></label></div><div class="pair-row"><label>Credits<input data-credit type="number" min="0.01" step="any" value="3" required /></label><label>Grade points<input data-grade type="number" min="0" step="any" value="8" required /></label></div></div><div class="calc-actions"><button class="text-button" data-add-pair type="button">+ Add course</button><button class="button button-small" type="submit">Calculate SGPA</button></div></form>
+          <form class="calc-card" data-calculation="cgpa"><h3>CGPA</h3><p>Add term credit and grade-point pairs.</p><div class="pair-list" data-pairs><div class="pair-row"><label>Credits<input data-credit type="number" min="0.01" step="any" value="10" required /></label><label>Grade points<input data-grade type="number" min="0" step="any" value="8.1" required /></label></div><div class="pair-row"><label>Credits<input data-credit type="number" min="0.01" step="any" value="20" required /></label><label>Grade points<input data-grade type="number" min="0" step="any" value="7.5" required /></label></div></div><div class="calc-actions"><button class="text-button" data-add-pair type="button">+ Add term</button><button class="button button-small" type="submit">Calculate CGPA</button></div></form>
+        </div>
+        <div id="calculation-result" class="calculation-result" aria-live="polite"><p class="muted">Choose a calculator to see inputs, formula, intermediate steps, result and dataset evidence.</p></div>
+      </section>
+
+      <section class="panel evaluation-panel" aria-labelledby="evaluation-title">
+        <div class="section-heading compact"><div><p class="eyebrow">REPRODUCIBLE DATASET CHECK</p><h2 id="evaluation-title">Question-by-question results</h2></div><button id="refresh-evaluation" class="button button-quiet" type="button">Run evaluation again</button></div>
+        <p class="muted">Runs all existing questions in their original order. A pass requires expected status, internally valid citation metadata, and retrieval of all expected evidence for answerable items. This diagnostic does not establish semantic faithfulness.</p>
+        <div id="evaluation-summary" class="evaluation-summary"><p class="muted">Loading evaluation…</p></div>
+        <details class="results-details"><summary>Inspect all 30 question results</summary><div class="table-wrap"><table><thead><tr><th>ID</th><th>Question</th><th>Expected</th><th>Actual</th><th>Retrieved evidence IDs / expected evidence</th><th>Citations valid</th><th>Abstention correct</th><th>Result</th></tr></thead><tbody id="evaluation-rows"></tbody></table></div></details>
+      </section>
+
+      <section class="panel architecture-panel" aria-labelledby="architecture-title">
+        <p class="eyebrow">HOW THIS DEMONSTRATION WORKS</p><h2 id="architecture-title">A transparent local workflow</h2>
+        <div class="flow" aria-label="User question flows through query processing, local retrieval, provenance validation, answerability check, and answer or abstention"><span>User question</span><b>→</b><span>Query processing</span><b>→</b><span>Local retrieval</span><b>→</b><span>Provenance validation</span><b>→</b><span>Answerability check</span><b>→</b><span>Answer + citations<br />or abstention</span></div>
+        <div class="architecture-notes"><p><strong>Retrieval</strong><br />Local cosine similarity over a process-memory representation of this corpus. Similarity scores are not probabilities or confidence estimates.</p><p><strong>Answer generation</strong><br />Deterministic local templates and calculations. No live OpenAI API or LLM is used.</p><p><strong>Corpus status</strong><br />All 28 policy records are project-authored generic examples. Official PES University regulations are not verified in this corpus.</p></div>
+      </section>
+      <footer><span>RAARA local demonstration</span><span>Offline • Nonofficial • No persistent writes</span></footer>
+    </main>
+  </body>
+</html>

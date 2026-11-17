@@ -1,0 +1,32 @@
+{
+  "dataset_version": "0.1.0",
+  "dataset_split": "development",
+  "source_type": "synthetic_controlled",
+  "description": "Controlled synthetic test corpus. These documents are not real university policies.",
+  "documents": [
+    {
+      "document_id": "SYNTH-ACADEMIC-GUIDE-V1",
+      "document_name": "Synthetic Academic Guide v1",
+      "version": "1",
+      "effective_date": "2025-09-01",
+      "source_type": "synthetic_controlled",
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "sources/SYNTHETIC_NOT_OFFICIAL_Academic_Guide_v1.pdf",
+      "page_count": 2,
+      "sha256": "d66ef2179b56661de092af1bb9d055eb38a2b465cf9c5ba4faa43e98384fff48"
+    },
+    {
+      "document_id": "SYNTH-ACADEMIC-GUIDE-V2",
+      "document_name": "Synthetic Academic Guide v2",
+      "version": "2",
+      "effective_date": "2026-02-01",
+      "source_type": "synthetic_controlled",
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "sources/SYNTHETIC_NOT_OFFICIAL_Academic_Guide_v2.pdf",
+      "page_count": 2,
+      "sha256": "bc8cae2159f7f6c824443d317a9f71dca77f316113dc7823fbfd6e70356174ad"
+    }
+  ]
+}

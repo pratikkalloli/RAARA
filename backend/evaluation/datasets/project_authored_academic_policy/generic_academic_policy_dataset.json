@@ -1,0 +1,1185 @@
+{
+  "dataset_id": "RAARA-GENERIC-ACADEMIC-POLICY",
+  "dataset_version": "1.0.0",
+  "dataset_type": "PROJECT_AUTHORED_GENERIC_POLICY",
+  "is_official_university_policy": false,
+  "provenance": "PROJECT_AUTHORED",
+  "source_type": "GENERIC_PROJECT_POLICY",
+  "purpose": "Standalone nonofficial policies and questions for RAARA project demonstrations only. No policy is attributed to PES University or any actual institution.",
+  "policies": [
+    {
+      "policy_id": "GAP-ATT-001",
+      "evidence_id": "GAP-E-ATT-001",
+      "title": "Illustrative minimum attendance",
+      "category": "attendance",
+      "exact_text": "For this RAARA demonstration only, the illustrative minimum attendance is 75%. This value is project-authored and is not an official university requirement or a universal standard.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Illustrative project content only; actual institutions and admission batches may use different rules."
+      ],
+      "calculation_details": {
+        "minimum_attendance_percent": 75
+      }
+    },
+    {
+      "policy_id": "GAP-ATT-002",
+      "evidence_id": "GAP-E-ATT-002",
+      "title": "Attendance percentage calculation",
+      "category": "attendance",
+      "exact_text": "Illustrative attendance percentage is calculated as (classes attended / classes held) x 100. Round only for display to two decimal places; eligibility decisions are outside this generic example.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Illustrative project content only; actual institutions and admission batches may use different rules."
+      ],
+      "calculation_details": {
+        "formula": "attended / held * 100",
+        "example": {
+          "attended": 72,
+          "held": 90,
+          "expected_percentage": 80.0
+        }
+      }
+    },
+    {
+      "policy_id": "GAP-ATT-003",
+      "evidence_id": "GAP-E-ATT-003",
+      "title": "Attendance shortfall calculation",
+      "category": "attendance",
+      "exact_text": "For this demonstration, compare calculated attendance with the illustrative 75% value. The difference is described in percentage points. This does not define condonation or eligibility.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Illustrative project content only; actual institutions and admission batches may use different rules."
+      ],
+      "calculation_details": {
+        "example": {
+          "attended": 63,
+          "held": 90,
+          "calculated_percent": 70.0,
+          "threshold_percent": 75,
+          "shortfall_percentage_points": 5.0
+        }
+      }
+    },
+    {
+      "policy_id": "GAP-ATT-004",
+      "evidence_id": "GAP-E-ATT-004",
+      "title": "Attendance exceptions are unspecified",
+      "category": "attendance",
+      "exact_text": "This project dataset does not define medical exemptions, condonation, special attendance relaxation, or the evidence required for such exceptions. Those questions require an applicable institution-issued rule.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "No exemption policy is supplied; do not infer one from the illustrative 75% threshold."
+      ],
+      "calculation_details": null
+    },
+    {
+      "policy_id": "GAP-ASSESS-001",
+      "evidence_id": "GAP-E-ASSESS-001",
+      "title": "Illustrative assessment weights",
+      "category": "assessment",
+      "exact_text": "In this project model, the illustrative course score uses internal assessment weight 40% and end-semester examination weight 60%. These are project assumptions, not official or universal weights.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Illustrative project content only; actual institutions and admission batches may use different rules."
+      ],
+      "calculation_details": {
+        "internal_weight_percent": 40,
+        "end_semester_weight_percent": 60
+      }
+    },
+    {
+      "policy_id": "GAP-ASSESS-002",
+      "evidence_id": "GAP-E-ASSESS-002",
+      "title": "Weighted course score formula",
+      "category": "assessment",
+      "exact_text": "Illustrative total score = (internal score x 0.40) + (end-semester score x 0.60), assuming both component scores are on a 0-100 scale. Actual assessment schemes may differ.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Illustrative project content only; actual institutions and admission batches may use different rules."
+      ],
+      "calculation_details": {
+        "formula": "internal_score * 0.40 + end_semester_score * 0.60"
+      }
+    },
+    {
+      "policy_id": "GAP-ASSESS-003",
+      "evidence_id": "GAP-E-ASSESS-003",
+      "title": "Assessment worked example",
+      "category": "assessment",
+      "exact_text": "Worked project example: internal score 34/100 and end-semester score 52/100 produce (34 x 0.40) + (52 x 0.60) = 13.6 + 31.2 = 44.8/100.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Illustrative project content only; actual institutions and admission batches may use different rules."
+      ],
+      "calculation_details": {
+        "worked_example": {
+          "internal_score": 34,
+          "end_semester_score": 52,
+          "expected_total": 44.8
+        }
+      }
+    },
+    {
+      "policy_id": "GAP-PASS-001",
+      "evidence_id": "GAP-E-PASS-001",
+      "title": "Illustrative overall passing score",
+      "category": "passing",
+      "exact_text": "For this demonstration, an illustrative overall weighted score of at least 40/100 is a pass. The project does not add a separate minimum examination score. Actual institutions may set additional or different component requirements.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "No separate minimum exam score is defined here; actual institution-specific component requirements may differ."
+      ],
+      "calculation_details": {
+        "overall_passing_score": 40,
+        "separate_exam_minimum_defined": false
+      }
+    },
+    {
+      "policy_id": "GAP-GRADE-001",
+      "evidence_id": "GAP-E-GRADE-001",
+      "title": "Illustrative ten-point scale",
+      "category": "grading",
+      "exact_text": "This project demonstration uses grade points on an illustrative 10-point scale. The scale is project-authored and is not asserted to match any university grading scheme.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Illustrative project content only; actual institutions and admission batches may use different rules."
+      ],
+      "calculation_details": {
+        "scale_min": 0,
+        "scale_max": 10
+      }
+    },
+    {
+      "policy_id": "GAP-GRADE-002",
+      "evidence_id": "GAP-E-GRADE-002",
+      "title": "Illustrative score-to-grade table",
+      "category": "grading",
+      "exact_text": "Project-only sample table for integer percentage scores: 90-100 : 10 points; 80-89 : 9; 70-79 : 8; 60-69 : 7; 50-59 : 6; 40-49 : 5; 0-39 : 0. This is a transparent example, not an institutional conversion table.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Illustrative project content only; actual institutions and admission batches may use different rules."
+      ],
+      "calculation_details": {
+        "grade_bands": [
+          {
+            "minimum": 0,
+            "maximum": 39,
+            "grade_point": 0
+          },
+          {
+            "minimum": 40,
+            "maximum": 49,
+            "grade_point": 5
+          },
+          {
+            "minimum": 50,
+            "maximum": 59,
+            "grade_point": 6
+          },
+          {
+            "minimum": 60,
+            "maximum": 69,
+            "grade_point": 7
+          },
+          {
+            "minimum": 70,
+            "maximum": 79,
+            "grade_point": 8
+          },
+          {
+            "minimum": 80,
+            "maximum": 89,
+            "grade_point": 9
+          },
+          {
+            "minimum": 90,
+            "maximum": 100,
+            "grade_point": 10
+          }
+        ]
+      }
+    },
+    {
+      "policy_id": "GAP-SGPA-001",
+      "evidence_id": "GAP-E-SGPA-001",
+      "title": "Illustrative SGPA formula",
+      "category": "sgpa",
+      "exact_text": "For the project model, SGPA = sum(course credits x course grade point) / sum(course credits) for courses included in the stated term. Actual university inclusion, exclusions, repeats, and rounding can differ.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Illustrative project content only; actual institutions and admission batches may use different rules."
+      ],
+      "calculation_details": {
+        "formula": "sum(credits * grade_point) / sum(credits)"
+      }
+    },
+    {
+      "policy_id": "GAP-SGPA-002",
+      "evidence_id": "GAP-E-SGPA-002",
+      "title": "SGPA worked example",
+      "category": "sgpa",
+      "exact_text": "Worked project example: course values (4 credits, 9 points), (3 credits, 8 points), and (3 credits, 7 points) give (4x9 + 3x8 + 3x7) / (4+3+3) = 81 / 10 = 8.10.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Illustrative project content only; actual institutions and admission batches may use different rules."
+      ],
+      "calculation_details": {
+        "worked_example": {
+          "courses": [
+            {
+              "credits": 4,
+              "grade_point": 9
+            },
+            {
+              "credits": 3,
+              "grade_point": 8
+            },
+            {
+              "credits": 3,
+              "grade_point": 7
+            }
+          ],
+          "expected_sgpa": 8.1
+        }
+      }
+    },
+    {
+      "policy_id": "GAP-CGPA-001",
+      "evidence_id": "GAP-E-CGPA-001",
+      "title": "Illustrative cumulative CGPA formula",
+      "category": "cgpa",
+      "exact_text": "For this project model, CGPA = sum(course credit x course grade point) / sum(all included course credits) across the stated cumulative set. Actual institutional treatment of repeats, exclusions, and rounding may differ.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Illustrative project content only; actual institutions and admission batches may use different rules."
+      ],
+      "calculation_details": {
+        "formula": "sum(course_credits * course_grade_point) / sum(all_included_course_credits)"
+      }
+    },
+    {
+      "policy_id": "GAP-CGPA-002",
+      "evidence_id": "GAP-E-CGPA-002",
+      "title": "CGPA worked example",
+      "category": "cgpa",
+      "exact_text": "Worked project example: a term block of 10 credits at 8.10 and another of 20 credits at 7.50 gives (10x8.10 + 20x7.50) / 30 = 231 / 30 = 7.70.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Illustrative project content only; actual institutions and admission batches may use different rules."
+      ],
+      "calculation_details": {
+        "worked_example": {
+          "terms": [
+            {
+              "credits": 10,
+              "grade_point": 8.1
+            },
+            {
+              "credits": 20,
+              "grade_point": 7.5
+            }
+          ],
+          "expected_cgpa": 7.7
+        }
+      }
+    },
+    {
+      "policy_id": "GAP-BACKLOG-001",
+      "evidence_id": "GAP-E-BACKLOG-001",
+      "title": "Illustrative backlog meaning",
+      "category": "backlogs",
+      "exact_text": "In this demonstration, a backlog means a course requirement remains uncleared after the student does not meet the applicable passing rule. This definition is only a generic example.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Actual terminology and consequences depend on the governing institution and cohort rules."
+      ],
+      "calculation_details": null
+    },
+    {
+      "policy_id": "GAP-BACKLOG-002",
+      "evidence_id": "GAP-E-BACKLOG-002",
+      "title": "Illustrative course-clearing concept",
+      "category": "backlogs",
+      "exact_text": "In this project model, a student clears an illustrative failed course by completing the institution-authorized assessment opportunity and satisfying the applicable passing criteria. This dataset does not define a real attempt process.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Do not infer attempt limits, eligibility, or exam dates from this generic statement."
+      ],
+      "calculation_details": null
+    },
+    {
+      "policy_id": "GAP-BACKLOG-003",
+      "evidence_id": "GAP-E-BACKLOG-003",
+      "title": "Supplementary attempts and dates unspecified",
+      "category": "backlogs",
+      "exact_text": "This generic dataset does not specify the maximum number of supplementary examination attempts, student eligibility conditions, or supplementary examination dates.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Questions about attempt limits, eligibility, or dates must be unanswered from this dataset."
+      ],
+      "calculation_details": null
+    },
+    {
+      "policy_id": "GAP-REVAL-001",
+      "evidence_id": "GAP-E-REVAL-001",
+      "title": "Illustrative revaluation request process",
+      "category": "revaluation",
+      "exact_text": "A generic project demonstration process is: consult the applicable examination notice, submit the prescribed request through the institution-designated channel, provide required course/exam details, and retain the acknowledgement. This is illustrative workflow guidance, not an official procedure.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Actual process, eligibility, fees, and channel are institution-specific."
+      ],
+      "calculation_details": null
+    },
+    {
+      "policy_id": "GAP-REVAL-002",
+      "evidence_id": "GAP-E-REVAL-002",
+      "title": "Revaluation deadlines unspecified",
+      "category": "revaluation",
+      "exact_text": "No fixed revaluation deadline or eligibility window is defined by this project dataset. Use only a current institution-issued examination notice for real deadlines.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Do not invent or infer a fixed deadline."
+      ],
+      "calculation_details": null
+    },
+    {
+      "policy_id": "GAP-REG-001",
+      "evidence_id": "GAP-E-REG-001",
+      "title": "Illustrative course registration process",
+      "category": "course_registration",
+      "exact_text": "A generic registration workflow is to review the available course list and prerequisites, select eligible courses through the institution-designated system, and confirm the recorded registration. This is a project illustration only.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Actual prerequisites, approval, add/drop, and withdrawal rules are institution-specific."
+      ],
+      "calculation_details": null
+    },
+    {
+      "policy_id": "GAP-REG-002",
+      "evidence_id": "GAP-E-REG-002",
+      "title": "Registration dates unspecified",
+      "category": "course_registration",
+      "exact_text": "This dataset defines no course registration, add/drop, or withdrawal deadlines. Those dates and conditions require an applicable institution-issued calendar or notice.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "No institutional deadline is provided."
+      ],
+      "calculation_details": null
+    },
+    {
+      "policy_id": "GAP-CREDIT-001",
+      "evidence_id": "GAP-E-CREDIT-001",
+      "title": "Course credits and workload",
+      "category": "credits",
+      "exact_text": "Credits are a course-level unit used in the project examples to weight academic work in calculations. This dataset does not define contact hours, workload equivalence, or a universal credit standard.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Credit-to-hours mappings vary and are not specified."
+      ],
+      "calculation_details": null
+    },
+    {
+      "policy_id": "GAP-CREDIT-002",
+      "evidence_id": "GAP-E-CREDIT-002",
+      "title": "Illustrative three-credit example",
+      "category": "credits",
+      "exact_text": "For a worked example only, a course may be represented as 3 credits. This value demonstrates how credits weight an SGPA/CGPA formula; it does not define a real course or workload.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Illustrative project content only; actual institutions and admission batches may use different rules."
+      ],
+      "calculation_details": {
+        "example_course_credits": 3
+      }
+    },
+    {
+      "policy_id": "GAP-PROG-001",
+      "evidence_id": "GAP-E-PROG-001",
+      "title": "Illustrative academic progression concepts",
+      "category": "academic_progression",
+      "exact_text": "Academic progression can depend on course completion, credits earned, prerequisites, and academic standing. This project record names possible factors but sets no actual promotion threshold.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "The factors are illustrative; no student-specific decision can be made from this record."
+      ],
+      "calculation_details": null
+    },
+    {
+      "policy_id": "GAP-PROG-002",
+      "evidence_id": "GAP-E-PROG-002",
+      "title": "Promotion criteria are institution-specific",
+      "category": "academic_progression",
+      "exact_text": "This dataset does not define promotion, probation, year-back, prerequisite, or minimum-credit criteria for any institution or admission batch. Such criteria must come from current applicable regulations.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Do not infer promotion eligibility from the generic dataset."
+      ],
+      "calculation_details": null
+    },
+    {
+      "policy_id": "GAP-CAL-001",
+      "evidence_id": "GAP-E-CAL-001",
+      "title": "Generic academic calendar periods",
+      "category": "academic_calendar",
+      "exact_text": "A generic academic calendar may identify semester teaching, registration, examination, and result periods. This dataset describes period types only and contains no real PES University dates.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Dates and institutional schedules are not supplied."
+      ],
+      "calculation_details": null
+    },
+    {
+      "policy_id": "GAP-CAL-002",
+      "evidence_id": "GAP-E-CAL-002",
+      "title": "Academic calendar dates unspecified",
+      "category": "academic_calendar",
+      "exact_text": "No real institutional semester, registration, examination, or result dates are defined in this project dataset.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "1.0",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Do not produce dates from this record."
+      ],
+      "calculation_details": null
+    },
+    {
+      "policy_id": "GAP-ATT-029",
+      "evidence_id": "GAP-E-ATT-029",
+      "title": "Synthetic attendance example version 0.9",
+      "category": "attendance",
+      "exact_text": "Project-only conflict fixture, version 0.9: the illustrative minimum attendance is 70%. This fictional earlier project example is not a university regulation and is included only to test version conflict handling.",
+      "provenance": "PROJECT_AUTHORED",
+      "source_type": "GENERIC_PROJECT_POLICY",
+      "is_official_university_policy": false,
+      "authority_status": "NOT_OFFICIAL",
+      "review_status": "PROJECT_APPROVED",
+      "version": "0.9",
+      "effective_date": null,
+      "applicability": "RAARA project demonstration only; not institution- or batch-specific.",
+      "created_by": "RAARA project team",
+      "limitations": [
+        "Deliberately conflicts with project-authored version 1.0; neither version is official."
+      ],
+      "calculation_details": null
+    }
+  ],
+  "questions": [
+    {
+      "question_id": "GAP-Q-001",
+      "question": "What is the illustrative minimum attendance in this project model?",
+      "is_project_demonstration_question": true,
+      "category": "direct_factual",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "The project-authored illustrative minimum is 75%; it is not an official university rule.",
+      "relevant_policy_ids": [
+        "GAP-ATT-001"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-ATT-001"
+      ],
+      "calculation": null,
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-002",
+      "question": "A student attended 72 of 90 classes. What is the attendance percentage?",
+      "is_project_demonstration_question": true,
+      "category": "numerical_calculation",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "(72 / 90) x 100 = 80.00%. This calculation does not determine institutional eligibility.",
+      "relevant_policy_ids": [
+        "GAP-ATT-002"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-ATT-002"
+      ],
+      "calculation": {
+        "attended": 72,
+        "held": 90,
+        "expected_percentage": 80.0
+      },
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-003",
+      "question": "A student attended 63 of 90 classes. How many percentage points below the illustrative threshold are they?",
+      "is_project_demonstration_question": true,
+      "category": "numerical_calculation",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "Attendance is 70%; compared with the illustrative 75% threshold, the shortfall is 5 percentage points.",
+      "relevant_policy_ids": [
+        "GAP-ATT-002",
+        "GAP-ATT-003"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-ATT-002",
+        "GAP-E-ATT-003"
+      ],
+      "calculation": {
+        "attended": 63,
+        "held": 90,
+        "expected_percentage": 70.0,
+        "threshold": 75,
+        "shortfall_percentage_points": 5.0
+      },
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-004",
+      "question": "What assessment weights does the project example use?",
+      "is_project_demonstration_question": true,
+      "category": "direct_factual",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "The project example uses 40% internal assessment and 60% end-semester examination. These are illustrative assumptions.",
+      "relevant_policy_ids": [
+        "GAP-ASSESS-001"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-ASSESS-001"
+      ],
+      "calculation": null,
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-005",
+      "question": "Internal score is 34/100 and end-semester score is 52/100. Calculate the weighted score.",
+      "is_project_demonstration_question": true,
+      "category": "numerical_calculation",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "(34 x 0.40) + (52 x 0.60) = 13.6 + 31.2 = 44.8/100.",
+      "relevant_policy_ids": [
+        "GAP-ASSESS-002",
+        "GAP-ASSESS-003"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-ASSESS-002",
+        "GAP-E-ASSESS-003"
+      ],
+      "calculation": {
+        "internal": 34,
+        "end_semester": 52,
+        "expected_total": 44.8
+      },
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-006",
+      "question": "Using the project assessment split and pass assumption, does a score of 44.8/100 meet the illustrative overall pass score?",
+      "is_project_demonstration_question": true,
+      "category": "multi_policy",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "Yes. 44.8 is at least the project-authored overall threshold of 40/100. No separate exam minimum is defined here; actual institutional criteria may differ.",
+      "relevant_policy_ids": [
+        "GAP-PASS-001",
+        "GAP-ASSESS-003"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-PASS-001",
+        "GAP-E-ASSESS-003"
+      ],
+      "calculation": null,
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-007",
+      "question": "What is the illustrative overall passing score?",
+      "is_project_demonstration_question": true,
+      "category": "direct_factual",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "The project-authored example uses an overall score of at least 40/100. It does not set a separate exam minimum.",
+      "relevant_policy_ids": [
+        "GAP-PASS-001"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-PASS-001"
+      ],
+      "calculation": null,
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-008",
+      "question": "In the sample grade table, what grade point corresponds to a score of 84?",
+      "is_project_demonstration_question": true,
+      "category": "direct_factual",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "The illustrative table maps 80-89 to 9 grade points, so 84 maps to 9 in this project example.",
+      "relevant_policy_ids": [
+        "GAP-GRADE-002"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-GRADE-002"
+      ],
+      "calculation": null,
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-009",
+      "question": "What grade point does the sample table assign to a score of 35?",
+      "is_project_demonstration_question": true,
+      "category": "direct_factual",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "The project-only table maps 0-39 to 0 grade points.",
+      "relevant_policy_ids": [
+        "GAP-GRADE-002"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-GRADE-002"
+      ],
+      "calculation": null,
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-010",
+      "question": "Calculate the example SGPA for (4 credits, 9 points), (3 credits, 8 points), and (3 credits, 7 points).",
+      "is_project_demonstration_question": true,
+      "category": "numerical_calculation",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "(4x9 + 3x8 + 3x7) / 10 = 81 / 10 = 8.10.",
+      "relevant_policy_ids": [
+        "GAP-SGPA-001",
+        "GAP-SGPA-002"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-SGPA-001",
+        "GAP-E-SGPA-002"
+      ],
+      "calculation": {
+        "courses": [
+          {
+            "credits": 4,
+            "grade_point": 9
+          },
+          {
+            "credits": 3,
+            "grade_point": 8
+          },
+          {
+            "credits": 3,
+            "grade_point": 7
+          }
+        ],
+        "expected_sgpa": 8.1
+      },
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-011",
+      "question": "What is the project SGPA formula?",
+      "is_project_demonstration_question": true,
+      "category": "direct_factual",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "SGPA = sum(course credits x course grade points) / sum(course credits) for the stated term in this project model.",
+      "relevant_policy_ids": [
+        "GAP-SGPA-001"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-SGPA-001"
+      ],
+      "calculation": null,
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-012",
+      "question": "Calculate the illustrative CGPA for 10 credits at 8.1 and 20 credits at 7.5.",
+      "is_project_demonstration_question": true,
+      "category": "numerical_calculation",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "(10x8.1 + 20x7.5) / 30 = 231 / 30 = 7.70.",
+      "relevant_policy_ids": [
+        "GAP-CGPA-001",
+        "GAP-CGPA-002"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-CGPA-001",
+        "GAP-E-CGPA-002"
+      ],
+      "calculation": {
+        "terms": [
+          {
+            "credits": 10,
+            "grade_point": 8.1
+          },
+          {
+            "credits": 20,
+            "grade_point": 7.5
+          }
+        ],
+        "expected_cgpa": 7.7
+      },
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-013",
+      "question": "How does the project model define a backlog?",
+      "is_project_demonstration_question": true,
+      "category": "direct_factual",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "It is a course requirement that remains uncleared after the student does not meet the applicable passing rule; actual terminology and consequences vary.",
+      "relevant_policy_ids": [
+        "GAP-BACKLOG-001"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-BACKLOG-001"
+      ],
+      "calculation": null,
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-014",
+      "question": "How can a failed course be cleared in the generic example?",
+      "is_project_demonstration_question": true,
+      "category": "direct_factual",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "By completing an institution-authorized assessment opportunity and satisfying the applicable passing criteria; this dataset defines no actual attempt process.",
+      "relevant_policy_ids": [
+        "GAP-BACKLOG-002"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-BACKLOG-002"
+      ],
+      "calculation": null,
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-015",
+      "question": "What is the maximum number of supplementary attempts?",
+      "is_project_demonstration_question": true,
+      "category": "unanswerable",
+      "expected_status": "NOT_FOUND",
+      "expected_answer": null,
+      "relevant_policy_ids": [],
+      "relevant_evidence_ids": [],
+      "calculation": null,
+      "evaluation_notes": "The project dataset explicitly leaves attempt limits unspecified; do not infer them."
+    },
+    {
+      "question_id": "GAP-Q-016",
+      "question": "What supplementary examination date applies this semester?",
+      "is_project_demonstration_question": true,
+      "category": "unanswerable",
+      "expected_status": "NOT_FOUND",
+      "expected_answer": null,
+      "relevant_policy_ids": [],
+      "relevant_evidence_ids": [],
+      "calculation": null,
+      "evaluation_notes": "No actual institutional dates appear in this dataset."
+    },
+    {
+      "question_id": "GAP-Q-017",
+      "question": "What generic steps might a student take to request revaluation?",
+      "is_project_demonstration_question": true,
+      "category": "direct_factual",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "Consult the applicable examination notice, submit the prescribed request through the designated channel with required details, and retain acknowledgement. This is illustrative only.",
+      "relevant_policy_ids": [
+        "GAP-REVAL-001"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-REVAL-001"
+      ],
+      "calculation": null,
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-018",
+      "question": "What is the revaluation deadline?",
+      "is_project_demonstration_question": true,
+      "category": "unanswerable",
+      "expected_status": "NOT_FOUND",
+      "expected_answer": null,
+      "relevant_policy_ids": [],
+      "relevant_evidence_ids": [],
+      "calculation": null,
+      "evaluation_notes": "No fixed deadline is defined; an applicable institution notice is required."
+    },
+    {
+      "question_id": "GAP-Q-019",
+      "question": "What generic steps are shown for course registration?",
+      "is_project_demonstration_question": true,
+      "category": "direct_factual",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "Review courses and prerequisites, select eligible courses through the designated system, and confirm the recorded registration; actual procedures vary.",
+      "relevant_policy_ids": [
+        "GAP-REG-001"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-REG-001"
+      ],
+      "calculation": null,
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-020",
+      "question": "What is the course add/drop deadline?",
+      "is_project_demonstration_question": true,
+      "category": "unanswerable",
+      "expected_status": "NOT_FOUND",
+      "expected_answer": null,
+      "relevant_policy_ids": [],
+      "relevant_evidence_ids": [],
+      "calculation": null,
+      "evaluation_notes": "No institutional dates or deadlines are supplied."
+    },
+    {
+      "question_id": "GAP-Q-021",
+      "question": "What do credits represent in this project dataset?",
+      "is_project_demonstration_question": true,
+      "category": "direct_factual",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "They are course-level units used to weight the project calculations; this dataset does not map credits to contact hours.",
+      "relevant_policy_ids": [
+        "GAP-CREDIT-001"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-CREDIT-001"
+      ],
+      "calculation": null,
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-022",
+      "question": "Does a 3-credit example tell us the number of contact hours?",
+      "is_project_demonstration_question": true,
+      "category": "unanswerable",
+      "expected_status": "NOT_FOUND",
+      "expected_answer": null,
+      "relevant_policy_ids": [],
+      "relevant_evidence_ids": [],
+      "calculation": null,
+      "evaluation_notes": "The dataset explicitly does not define a credit-to-hours conversion."
+    },
+    {
+      "question_id": "GAP-Q-023",
+      "question": "What factors may be considered in the generic progression example?",
+      "is_project_demonstration_question": true,
+      "category": "direct_factual",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "Course completion, credits earned, prerequisites, and academic standing are named as possible factors, without setting a promotion threshold.",
+      "relevant_policy_ids": [
+        "GAP-PROG-001"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-PROG-001"
+      ],
+      "calculation": null,
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-024",
+      "question": "Can you determine whether a particular student is eligible for promotion?",
+      "is_project_demonstration_question": true,
+      "category": "clarification",
+      "expected_status": "NEEDS_CLARIFICATION",
+      "expected_answer": null,
+      "relevant_policy_ids": [],
+      "relevant_evidence_ids": [],
+      "calculation": null,
+      "evaluation_notes": "No student results, applicable regulation, or institution-specific progression criteria were supplied."
+    },
+    {
+      "question_id": "GAP-Q-025",
+      "question": "Which periods may a generic academic calendar show?",
+      "is_project_demonstration_question": true,
+      "category": "direct_factual",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "It may identify teaching, registration, examination, and result periods; this dataset contains no actual dates.",
+      "relevant_policy_ids": [
+        "GAP-CAL-001"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-CAL-001"
+      ],
+      "calculation": null,
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-026",
+      "question": "What are the official PES University attendance dates or threshold?",
+      "is_project_demonstration_question": true,
+      "category": "unanswerable",
+      "expected_status": "NOT_FOUND",
+      "expected_answer": null,
+      "relevant_policy_ids": [],
+      "relevant_evidence_ids": [],
+      "calculation": null,
+      "evaluation_notes": "Generic project assumptions cannot establish any official PES University requirement; use applicable verified institutional sources."
+    },
+    {
+      "question_id": "GAP-Q-027",
+      "question": "Is the illustrative 75% attendance rule applicable to the 2025 B.Tech AIML admission batch?",
+      "is_project_demonstration_question": true,
+      "category": "unanswerable",
+      "expected_status": "NOT_FOUND",
+      "expected_answer": null,
+      "relevant_policy_ids": [],
+      "relevant_evidence_ids": [],
+      "calculation": null,
+      "evaluation_notes": "The dataset is not batch-specific and cannot establish applicability to a real cohort."
+    },
+    {
+      "question_id": "GAP-Q-028",
+      "question": "Does this dataset grant a medical attendance exemption?",
+      "is_project_demonstration_question": true,
+      "category": "unanswerable",
+      "expected_status": "NOT_FOUND",
+      "expected_answer": null,
+      "relevant_policy_ids": [],
+      "relevant_evidence_ids": [],
+      "calculation": null,
+      "evaluation_notes": "Medical exemptions and special attendance relaxation are unspecified."
+    },
+    {
+      "question_id": "GAP-Q-029",
+      "question": "What percentage is 54 attended classes out of 72 held?",
+      "is_project_demonstration_question": true,
+      "category": "numerical_calculation",
+      "expected_status": "SUPPORTED",
+      "expected_answer": "(54 / 72) x 100 = 75.00%. This arithmetic alone does not establish official eligibility.",
+      "relevant_policy_ids": [
+        "GAP-ATT-002"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-ATT-002"
+      ],
+      "calculation": {
+        "attended": 54,
+        "held": 72,
+        "expected_percentage": 75.0
+      },
+      "evaluation_notes": "Project demonstration data only; not an official university question."
+    },
+    {
+      "question_id": "GAP-Q-030",
+      "question": "The project attendance examples state 70% in v0.9 and 75% in v1.0. What should a demo explain?",
+      "is_project_demonstration_question": true,
+      "category": "conflicting_policy",
+      "expected_status": "CONFLICTING_SOURCES",
+      "expected_answer": "These are deliberately conflicting project-authored versions. Report both values and their version labels; do not present either as official university policy.",
+      "relevant_policy_ids": [
+        "GAP-ATT-029",
+        "GAP-ATT-001"
+      ],
+      "relevant_evidence_ids": [
+        "GAP-E-ATT-029",
+        "GAP-E-ATT-001"
+      ],
+      "calculation": null,
+      "evaluation_notes": "Both source records are explicitly project-authored; this is a synthetic version-conflict test, not a real amendment."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "configuration_version": "0.1.0",
+  "dataset_split": "development",
+  "retrieval": {
+    "top_k": 5,
+    "relevance_threshold": 0.35,
+    "distance_metric": "cosine",
+    "duplicate_result_policy": "deduplicate by exact identifier, preserve first rank"
+  },
+  "models": {
+    "embedding_model": "text-embedding-3-small",
+    "generation_model_setting": "OPENAI_CHAT_MODEL",
+    "generation_model_default_in_project_config": "gpt-4.1-mini"
+  },
+  "prompt_configurations": ["A", "B", "C"],
+  "random_seed": null,
+  "random_seed_note": "Dataset and deterministic metrics are fixed; no model sampling was run in Phase 7A.",
+  "cost_rate_snapshot": null,
+  "cost_rate_note": "Estimated cost is unavailable unless a run supplies token usage and an explicit rate snapshot."
+}

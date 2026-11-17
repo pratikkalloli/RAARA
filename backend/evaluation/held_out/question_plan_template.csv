@@ -1,0 +1,11 @@
+plan_id,category,target_questions,source_ids,question_id,question,answerable,expected_status,document_id,document_version,page_number,section,exact_evidence,expected_answer,annotation_rationale,annotator_id,annotated_at,annotation_status,reviewer_id,reviewed_at,applicability_notes
+PLAN-01,direct_factual,8,,,,,,,,,,,,,,,,,
+PLAN-02,academic_eligibility,6,,,,,,,,,,,,,,,,,
+PLAN-03,examination_assessment,8,,,,,,,,,,,,,,,,,
+PLAN-04,grading_academic_performance,6,,,,,,,,,,,,,,,,,
+PLAN-05,multi_passage,5,,,,,,,,,,,,,,,,,
+PLAN-06,multi_document,5,,,,,,,,,,,,,,,,,
+PLAN-07,version_sensitive,5,,,,,,,,,,,,,,,,,
+PLAN-08,conflicting_policy,3,,,,,,,,,,,,,,,,,
+PLAN-09,unanswerable,4,,,,,,,,,,,,,,,,,
+PLAN-10,prompt_injection,4,,,,,,,,,,,,,,,,,

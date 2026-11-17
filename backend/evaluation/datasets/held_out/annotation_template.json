@@ -1,0 +1,59 @@
+{
+  "template_only": true,
+  "instructions": "Replace every placeholder only after reviewing an authorized source document. This is not a dataset item and must not be scored.",
+  "record": {
+    "question_id": "<unique-heldout-id>",
+    "question": "<question grounded in source evidence>",
+    "category": "<direct_factual|multi_passage|multi_document|unanswerable|conflicting_policy|version_sensitive|academic_eligibility|examination_assessment|grading_academic_performance|policy_interpretation|prompt_injection>",
+    "expected_status": "<SUPPORTED|PARTIALLY_SUPPORTED|NOT_FOUND|CONFLICTING_SOURCES>",
+    "answerable": "<true-or-false>",
+    "expected_answer": "<evidence-based expected answer, or null for NOT_FOUND>",
+    "relevant_document_ids": ["<registry-document-id>"],
+    "relevant_pages": [
+      {"document_id": "<registry-document-id>", "page_number": 1, "section": "<section heading or empty string>"}
+    ],
+    "relevant_evidence": [
+      {
+        "document_id": "<registry-document-id>",
+        "document_version": "<exact registry version>",
+        "page_number": 1,
+        "section": "<section heading or empty string>",
+        "evidence_id": "<unique stable passage ID>",
+        "text": "<exact span copied from the cited PDF page>"
+      }
+    ],
+    "expected_claims": ["<atomic expected claim>"],
+    "annotation_notes": "<rationale, ambiguity, conflict or abstention notes>",
+    "annotation_status": "PENDING_REVIEW",
+    "annotator_id": "<annotator identifier>",
+    "annotated_at": "<YYYY-MM-DD>",
+    "reviewer_id": null,
+    "reviewed_at": null,
+    "attack_surface": "<none|question|retrieved_document|both>",
+    "dataset_version": "held_out-1.0"
+  },
+  "registry_record_fields": {
+    "document_id": "<unique ID>",
+    "document_title": "<title from the document>",
+    "original_filename": "<original filename>",
+    "version": "<source version>",
+    "publication_date": "<YYYY-MM-DD or null>",
+    "effective_date": "<YYYY-MM-DD or null>",
+    "authority_status": "<official|unofficial_reference>",
+    "authority_review_status": "<pending|verified|not_official>",
+    "authority_reviewer_id": "<independent reviewer or null>",
+    "authority_reviewed_at": "<YYYY-MM-DD or null>",
+    "relative_path": "sources/<copied-original-pdf>",
+    "page_count": "<integer from original PDF>",
+    "sha256": "<SHA-256 of original bytes>",
+    "provenance": {
+      "acquisition_method": "<authorized_public_source|project_owner_supplied>",
+      "source_url": "<original URL or null>",
+      "source_description": "<original source/provenance description>",
+      "retrieved_at": "<YYYY-MM-DD>",
+      "permission_record": "<authorization, license or public-access basis>"
+    },
+    "supersedes_document_ids": []
+  },
+  "approval_rule": "PENDING_REVIEW records require a separate reviewer before approval. Review outcomes are APPROVED, REJECTED, or NEEDS_CORRECTION. DRAFT exists only in planning materials. Approval is rejected unless all cited sources are independently verified official documents."
+}

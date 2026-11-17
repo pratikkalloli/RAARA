@@ -1,0 +1,239 @@
+{
+  "dataset_version": "9A.1.0",
+  "dataset_type": "SYNTHETIC_PROJECT_DATA",
+  "is_official_university_policy": false,
+  "source_type": "PROJECT_AUTHORED",
+  "scenarios": [
+    {
+      "scenario_id": "P9A-C01",
+      "title": "Attendance threshold version",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "is_official_university_policy": false,
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_version": "9A.1.0",
+      "applicable_student_categories": "Project-model B.Tech students at both synthetic campuses; current and older versions are compared by effective date.",
+      "source_documents": [
+        {
+          "document_id": "SYNTH-P9A-ATTENDANCE-OLD-C01",
+          "document_name": "Superseded Attendance Policy v0.9",
+          "version": "0.9",
+          "effective_date": "2025-09-01",
+          "superseded_by_document_id": "SYNTH-P9A-ATTENDANCE-05"
+        },
+        {
+          "document_id": "SYNTH-P9A-ATTENDANCE-05",
+          "document_name": "Attendance and ESA Eligibility Policy",
+          "version": "1.0",
+          "effective_date": "2026-09-01",
+          "superseded_by_document_id": null
+        }
+      ],
+      "expected_resolution": "Use current v1.0, effective 2026-09-01: 75% per subject. v0.9's 70% is superseded, not an unresolved current rule.",
+      "ground_truth_evidence": [
+        {
+          "evidence_id": "old_attendance",
+          "document_id": "SYNTH-P9A-ATTENDANCE-OLD-C01",
+          "document_version": "0.9",
+          "page_number": 1,
+          "section": "Historical attendance threshold",
+          "text": "In the older synthetic project model, minimum attendance was 70% in each subject.",
+          "dataset_type": "SYNTHETIC_PROJECT_DATA",
+          "is_official_university_policy": false,
+          "source_type": "PROJECT_AUTHORED",
+          "dataset_version": "9A.1.0"
+        },
+        {
+          "evidence_id": "old_attendance_supersession",
+          "document_id": "SYNTH-P9A-ATTENDANCE-OLD-C01",
+          "document_version": "0.9",
+          "page_number": 1,
+          "section": "Historical attendance threshold",
+          "text": "This version was superseded effective 2026-09-01 by version 1.0, which requires 75% in each subject.",
+          "dataset_type": "SYNTHETIC_PROJECT_DATA",
+          "is_official_university_policy": false,
+          "source_type": "PROJECT_AUTHORED",
+          "dataset_version": "9A.1.0"
+        },
+        {
+          "evidence_id": "attendance.minimum",
+          "document_id": "SYNTH-P9A-ATTENDANCE-05",
+          "document_version": "1.0",
+          "page_number": 1,
+          "section": "Subject attendance and ESA eligibility",
+          "text": "The minimum attendance requirement is 75% in each subject.",
+          "dataset_type": "SYNTHETIC_PROJECT_DATA",
+          "is_official_university_policy": false,
+          "source_type": "PROJECT_AUTHORED",
+          "dataset_version": "9A.1.0"
+        }
+      ],
+      "question_id": "P9A-CONF-001"
+    },
+    {
+      "scenario_id": "P9A-C02",
+      "title": "Assessment weights version",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "is_official_university_policy": false,
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_version": "9A.1.0",
+      "applicable_student_categories": "Project-model B.Tech students at both synthetic campuses; current and older versions are compared by effective date.",
+      "source_documents": [
+        {
+          "document_id": "SYNTH-P9A-ASSESSMENT-OLD-C02",
+          "document_name": "Superseded Assessment Scheme v0.9",
+          "version": "0.9",
+          "effective_date": "2025-09-01",
+          "superseded_by_document_id": "SYNTH-P9A-ASSESSMENT-06"
+        },
+        {
+          "document_id": "SYNTH-P9A-ASSESSMENT-06",
+          "document_name": "ISA, ESA and Laboratory Assessment Policy",
+          "version": "1.0",
+          "effective_date": "2026-09-01",
+          "superseded_by_document_id": null
+        }
+      ],
+      "expected_resolution": "Use current v1.0, effective 2026-09-01: ISA 1 20%, ISA 2 20%, ESA 50%, Laboratory 10%. v0.9's 15/15/60/10 weights are superseded.",
+      "ground_truth_evidence": [
+        {
+          "evidence_id": "old_assessment",
+          "document_id": "SYNTH-P9A-ASSESSMENT-OLD-C02",
+          "document_version": "0.9",
+          "page_number": 1,
+          "section": "Historical assessment weights",
+          "text": "The older synthetic assessment scheme used ISA 1 at 15%, ISA 2 at 15%, ESA at 60%, and Laboratory at 10%.",
+          "dataset_type": "SYNTHETIC_PROJECT_DATA",
+          "is_official_university_policy": false,
+          "source_type": "PROJECT_AUTHORED",
+          "dataset_version": "9A.1.0"
+        },
+        {
+          "evidence_id": "old_assessment_supersession",
+          "document_id": "SYNTH-P9A-ASSESSMENT-OLD-C02",
+          "document_version": "0.9",
+          "page_number": 1,
+          "section": "Historical assessment weights",
+          "text": "This version was superseded effective 2026-09-01 by version 1.0, which uses 20%, 20%, 50%, and 10%, respectively.",
+          "dataset_type": "SYNTHETIC_PROJECT_DATA",
+          "is_official_university_policy": false,
+          "source_type": "PROJECT_AUTHORED",
+          "dataset_version": "9A.1.0"
+        },
+        {
+          "evidence_id": "assessment.isa1",
+          "document_id": "SYNTH-P9A-ASSESSMENT-06",
+          "document_version": "1.0",
+          "page_number": 1,
+          "section": "Components and weights",
+          "text": "ISA 1 has a raw maximum of 40 marks and a final-score weight of 20%.",
+          "dataset_type": "SYNTHETIC_PROJECT_DATA",
+          "is_official_university_policy": false,
+          "source_type": "PROJECT_AUTHORED",
+          "dataset_version": "9A.1.0"
+        },
+        {
+          "evidence_id": "assessment.isa2",
+          "document_id": "SYNTH-P9A-ASSESSMENT-06",
+          "document_version": "1.0",
+          "page_number": 1,
+          "section": "Components and weights",
+          "text": "ISA 2 has a raw maximum of 40 marks and a final-score weight of 20%.",
+          "dataset_type": "SYNTHETIC_PROJECT_DATA",
+          "is_official_university_policy": false,
+          "source_type": "PROJECT_AUTHORED",
+          "dataset_version": "9A.1.0"
+        },
+        {
+          "evidence_id": "assessment.esa",
+          "document_id": "SYNTH-P9A-ASSESSMENT-06",
+          "document_version": "1.0",
+          "page_number": 1,
+          "section": "Components and weights",
+          "text": "ESA has a raw maximum of 100 marks and a final-score weight of 50%.",
+          "dataset_type": "SYNTHETIC_PROJECT_DATA",
+          "is_official_university_policy": false,
+          "source_type": "PROJECT_AUTHORED",
+          "dataset_version": "9A.1.0"
+        },
+        {
+          "evidence_id": "assessment.lab",
+          "document_id": "SYNTH-P9A-ASSESSMENT-06",
+          "document_version": "1.0",
+          "page_number": 1,
+          "section": "Components and weights",
+          "text": "Laboratory has a raw maximum of 30 marks and a final-score weight of 10%.",
+          "dataset_type": "SYNTHETIC_PROJECT_DATA",
+          "is_official_university_policy": false,
+          "source_type": "PROJECT_AUTHORED",
+          "dataset_version": "9A.1.0"
+        }
+      ],
+      "question_id": "P9A-CONF-002"
+    },
+    {
+      "scenario_id": "P9A-C03",
+      "title": "Entry-category progression scope",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "is_official_university_policy": false,
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_version": "9A.1.0",
+      "applicable_student_categories": "Regular-entry students and diploma lateral-entry students, each under their separately scoped threshold",
+      "source_documents": [
+        {
+          "document_id": "SYNTH-P9A-PROGRESSION-REG-03",
+          "document_name": "Regular-Entry Academic Progression and Year-Back Policy",
+          "version": "1.0",
+          "effective_date": "2026-09-01",
+          "superseded_by_document_id": null
+        },
+        {
+          "document_id": "SYNTH-P9A-PROGRESSION-LAT-04",
+          "document_name": "Lateral-Entry Academic Progression and Year-Back Policy",
+          "version": "1.0",
+          "effective_date": "2026-09-01",
+          "superseded_by_document_id": null
+        }
+      ],
+      "expected_resolution": "Apply 72 cumulative credits to regular-entry students and 24 credits from Semesters 3 and 4 to diploma lateral-entry students. This is a scope distinction, not an unresolved contradiction.",
+      "ground_truth_evidence": [
+        {
+          "evidence_id": "progress.reg_threshold",
+          "document_id": "SYNTH-P9A-PROGRESSION-REG-03",
+          "document_version": "1.0",
+          "page_number": 1,
+          "section": "Regular-entry progression",
+          "text": "A regular-entry student must have earned at least 72 cumulative credits after Semester 4.",
+          "dataset_type": "SYNTHETIC_PROJECT_DATA",
+          "is_official_university_policy": false,
+          "source_type": "PROJECT_AUTHORED",
+          "dataset_version": "9A.1.0"
+        },
+        {
+          "evidence_id": "progress.lat_threshold",
+          "document_id": "SYNTH-P9A-PROGRESSION-LAT-04",
+          "document_version": "1.0",
+          "page_number": 1,
+          "section": "Lateral-entry progression",
+          "text": "A lateral-entry student must have earned at least 24 cumulative credits from Semesters 3 and 4.",
+          "dataset_type": "SYNTHETIC_PROJECT_DATA",
+          "is_official_university_policy": false,
+          "source_type": "PROJECT_AUTHORED",
+          "dataset_version": "9A.1.0"
+        },
+        {
+          "evidence_id": "progress.lat_review",
+          "document_id": "SYNTH-P9A-PROGRESSION-LAT-04",
+          "document_version": "1.0",
+          "page_number": 1,
+          "section": "Lateral-entry progression",
+          "text": "The threshold is not 72 credits: the regular-entry threshold does not apply to this category.",
+          "dataset_type": "SYNTHETIC_PROJECT_DATA",
+          "is_official_university_policy": false,
+          "source_type": "PROJECT_AUTHORED",
+          "dataset_version": "9A.1.0"
+        }
+      ],
+      "question_id": "P9A-CONF-003"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "suite": "full backend regression",
+  "status": "PASS",
+  "passed": 265,
+  "failed": 0,
+  "collected": 265,
+  "duration_seconds": 160.13,
+  "observed_date": "2026-11-14",
+  "storage_isolated": true,
+  "live_openai_calls": false
+}

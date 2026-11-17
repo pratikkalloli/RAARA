@@ -1,0 +1,2198 @@
+{
+  "benchmark": "RAARA Phase 7B retrieval benchmark",
+  "created_at_utc": "2026-11-09T12:11:57.411195+00:00",
+  "dataset_version": "0.1.0",
+  "dataset_sha256": "db97d1d3d6d723fbdaea7a641dd1f37e988f48abd099145b903af61e5883bf8a",
+  "manifest_sha256": "f85a5e15f2dc4193c468f34e25bf249cfd50cb6a24d071359427d4c21234ecf7",
+  "question_count": 12,
+  "repetitions": 3,
+  "index": {
+    "added_chunks": 12,
+    "reused_chunks": 0,
+    "chunk_count": 12
+  },
+  "configuration": {
+    "distance_metric": "cosine",
+    "cosine_similarity": "1 - cosine_distance",
+    "relevance_threshold": 0.35,
+    "top_k_values": [
+      1,
+      3,
+      5
+    ],
+    "chunk_size_tokens": 700,
+    "chunk_overlap_tokens": 100,
+    "production_embedding_model_configured": "text-embedding-3-small",
+    "embedding_model_used": "deterministic-tfidf-hash-v1",
+    "generation": "not run",
+    "storage": "isolated evaluation collection",
+    "verification_status": "unverified synthetic test documents"
+  },
+  "latency_scope": "Retrieval duration includes query embedding and Chroma vector query; separate timings are recorded for both. Excludes PDF extraction, chunking, indexing, and answer generation.",
+  "latency_ms_by_k": {
+    "1": {
+      "sample_count": 36,
+      "mean": 28.969247222222222,
+      "median": 24.19235,
+      "p95": 70.3304
+    },
+    "3": {
+      "sample_count": 36,
+      "mean": 29.645091666666666,
+      "median": 25.572499999999998,
+      "p95": 61.673
+    },
+    "5": {
+      "sample_count": 36,
+      "mean": 29.6865,
+      "median": 24.6725,
+      "p95": 68.0526
+    }
+  },
+  "metrics": {
+    "1": {
+      "precision_at_k": {
+        "value": 0.1,
+        "count": 10
+      },
+      "recall_at_k": {
+        "value": 0.1,
+        "count": 10
+      },
+      "reciprocal_rank": {
+        "value": 0.1,
+        "count": 10
+      },
+      "hit_rate": {
+        "value": 0.1,
+        "count": 10
+      },
+      "document_hit_rate": {
+        "value": 0.1,
+        "count": 10
+      },
+      "page_hit_rate": {
+        "value": 0.1,
+        "count": 10
+      },
+      "unanswerable_detection": {
+        "value": 1.0,
+        "count": 2
+      },
+      "average_retrieved_passages": {
+        "value": 0.08333333333333333,
+        "count": 12
+      },
+      "empty_retrieval_rate": {
+        "value": 0.9166666666666666,
+        "count": 12
+      }
+    },
+    "3": {
+      "precision_at_k": {
+        "value": 0.03333333333333333,
+        "count": 10
+      },
+      "recall_at_k": {
+        "value": 0.1,
+        "count": 10
+      },
+      "reciprocal_rank": {
+        "value": 0.1,
+        "count": 10
+      },
+      "hit_rate": {
+        "value": 0.1,
+        "count": 10
+      },
+      "document_hit_rate": {
+        "value": 0.1,
+        "count": 10
+      },
+      "page_hit_rate": {
+        "value": 0.1,
+        "count": 10
+      },
+      "unanswerable_detection": {
+        "value": 1.0,
+        "count": 2
+      },
+      "average_retrieved_passages": {
+        "value": 0.08333333333333333,
+        "count": 12
+      },
+      "empty_retrieval_rate": {
+        "value": 0.9166666666666666,
+        "count": 12
+      }
+    },
+    "5": {
+      "precision_at_k": {
+        "value": 0.02,
+        "count": 10
+      },
+      "recall_at_k": {
+        "value": 0.1,
+        "count": 10
+      },
+      "reciprocal_rank": {
+        "value": 0.1,
+        "count": 10
+      },
+      "hit_rate": {
+        "value": 0.1,
+        "count": 10
+      },
+      "document_hit_rate": {
+        "value": 0.1,
+        "count": 10
+      },
+      "page_hit_rate": {
+        "value": 0.1,
+        "count": 10
+      },
+      "unanswerable_detection": {
+        "value": 1.0,
+        "count": 2
+      },
+      "average_retrieved_passages": {
+        "value": 0.08333333333333333,
+        "count": 12
+      },
+      "empty_retrieval_rate": {
+        "value": 0.9166666666666666,
+        "count": 12
+      }
+    }
+  },
+  "by_category": {
+    "direct_factual": {
+      "1": {
+        "precision_at_k": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "recall_at_k": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "reciprocal_rank": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "hit_rate": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "document_hit_rate": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "page_hit_rate": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "unanswerable_detection": {
+          "value": null,
+          "count": 0
+        },
+        "average_retrieved_passages": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "empty_retrieval_rate": {
+          "value": 0.6666666666666666,
+          "count": 3
+        }
+      },
+      "3": {
+        "precision_at_k": {
+          "value": 0.1111111111111111,
+          "count": 3
+        },
+        "recall_at_k": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "reciprocal_rank": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "hit_rate": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "document_hit_rate": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "page_hit_rate": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "unanswerable_detection": {
+          "value": null,
+          "count": 0
+        },
+        "average_retrieved_passages": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "empty_retrieval_rate": {
+          "value": 0.6666666666666666,
+          "count": 3
+        }
+      },
+      "5": {
+        "precision_at_k": {
+          "value": 0.06666666666666667,
+          "count": 3
+        },
+        "recall_at_k": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "reciprocal_rank": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "hit_rate": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "document_hit_rate": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "page_hit_rate": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "unanswerable_detection": {
+          "value": null,
+          "count": 0
+        },
+        "average_retrieved_passages": {
+          "value": 0.3333333333333333,
+          "count": 3
+        },
+        "empty_retrieval_rate": {
+          "value": 0.6666666666666666,
+          "count": 3
+        }
+      }
+    },
+    "multi_passage": {
+      "1": {
+        "precision_at_k": {
+          "value": 0.0,
+          "count": 2
+        },
+        "recall_at_k": {
+          "value": 0.0,
+          "count": 2
+        },
+        "reciprocal_rank": {
+          "value": 0.0,
+          "count": 2
+        },
+        "hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "document_hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "page_hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "unanswerable_detection": {
+          "value": null,
+          "count": 0
+        },
+        "average_retrieved_passages": {
+          "value": 0.0,
+          "count": 2
+        },
+        "empty_retrieval_rate": {
+          "value": 1.0,
+          "count": 2
+        }
+      },
+      "3": {
+        "precision_at_k": {
+          "value": 0.0,
+          "count": 2
+        },
+        "recall_at_k": {
+          "value": 0.0,
+          "count": 2
+        },
+        "reciprocal_rank": {
+          "value": 0.0,
+          "count": 2
+        },
+        "hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "document_hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "page_hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "unanswerable_detection": {
+          "value": null,
+          "count": 0
+        },
+        "average_retrieved_passages": {
+          "value": 0.0,
+          "count": 2
+        },
+        "empty_retrieval_rate": {
+          "value": 1.0,
+          "count": 2
+        }
+      },
+      "5": {
+        "precision_at_k": {
+          "value": 0.0,
+          "count": 2
+        },
+        "recall_at_k": {
+          "value": 0.0,
+          "count": 2
+        },
+        "reciprocal_rank": {
+          "value": 0.0,
+          "count": 2
+        },
+        "hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "document_hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "page_hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "unanswerable_detection": {
+          "value": null,
+          "count": 0
+        },
+        "average_retrieved_passages": {
+          "value": 0.0,
+          "count": 2
+        },
+        "empty_retrieval_rate": {
+          "value": 1.0,
+          "count": 2
+        }
+      }
+    },
+    "multi_document": {
+      "1": {
+        "precision_at_k": {
+          "value": 0.0,
+          "count": 1
+        },
+        "recall_at_k": {
+          "value": 0.0,
+          "count": 1
+        },
+        "reciprocal_rank": {
+          "value": 0.0,
+          "count": 1
+        },
+        "hit_rate": {
+          "value": 0.0,
+          "count": 1
+        },
+        "document_hit_rate": {
+          "value": 0.0,
+          "count": 1
+        },
+        "page_hit_rate": {
+          "value": 0.0,
+          "count": 1
+        },
+        "unanswerable_detection": {
+          "value": null,
+          "count": 0
+        },
+        "average_retrieved_passages": {
+          "value": 0.0,
+          "count": 1
+        },
+        "empty_retrieval_rate": {
+          "value": 1.0,
+          "count": 1
+        }
+      },
+      "3": {
+        "precision_at_k": {
+          "value": 0.0,
+          "count": 1
+        },
+        "recall_at_k": {
+          "value": 0.0,
+          "count": 1
+        },
+        "reciprocal_rank": {
+          "value": 0.0,
+          "count": 1
+        },
+        "hit_rate": {
+          "value": 0.0,
+          "count": 1
+        },
+        "document_hit_rate": {
+          "value": 0.0,
+          "count": 1
+        },
+        "page_hit_rate": {
+          "value": 0.0,
+          "count": 1
+        },
+        "unanswerable_detection": {
+          "value": null,
+          "count": 0
+        },
+        "average_retrieved_passages": {
+          "value": 0.0,
+          "count": 1
+        },
+        "empty_retrieval_rate": {
+          "value": 1.0,
+          "count": 1
+        }
+      },
+      "5": {
+        "precision_at_k": {
+          "value": 0.0,
+          "count": 1
+        },
+        "recall_at_k": {
+          "value": 0.0,
+          "count": 1
+        },
+        "reciprocal_rank": {
+          "value": 0.0,
+          "count": 1
+        },
+        "hit_rate": {
+          "value": 0.0,
+          "count": 1
+        },
+        "document_hit_rate": {
+          "value": 0.0,
+          "count": 1
+        },
+        "page_hit_rate": {
+          "value": 0.0,
+          "count": 1
+        },
+        "unanswerable_detection": {
+          "value": null,
+          "count": 0
+        },
+        "average_retrieved_passages": {
+          "value": 0.0,
+          "count": 1
+        },
+        "empty_retrieval_rate": {
+          "value": 1.0,
+          "count": 1
+        }
+      }
+    },
+    "unanswerable": {
+      "1": {
+        "precision_at_k": {
+          "value": null,
+          "count": 0
+        },
+        "recall_at_k": {
+          "value": null,
+          "count": 0
+        },
+        "reciprocal_rank": {
+          "value": null,
+          "count": 0
+        },
+        "hit_rate": {
+          "value": null,
+          "count": 0
+        },
+        "document_hit_rate": {
+          "value": null,
+          "count": 0
+        },
+        "page_hit_rate": {
+          "value": null,
+          "count": 0
+        },
+        "unanswerable_detection": {
+          "value": 1.0,
+          "count": 2
+        },
+        "average_retrieved_passages": {
+          "value": 0.0,
+          "count": 2
+        },
+        "empty_retrieval_rate": {
+          "value": 1.0,
+          "count": 2
+        }
+      },
+      "3": {
+        "precision_at_k": {
+          "value": null,
+          "count": 0
+        },
+        "recall_at_k": {
+          "value": null,
+          "count": 0
+        },
+        "reciprocal_rank": {
+          "value": null,
+          "count": 0
+        },
+        "hit_rate": {
+          "value": null,
+          "count": 0
+        },
+        "document_hit_rate": {
+          "value": null,
+          "count": 0
+        },
+        "page_hit_rate": {
+          "value": null,
+          "count": 0
+        },
+        "unanswerable_detection": {
+          "value": 1.0,
+          "count": 2
+        },
+        "average_retrieved_passages": {
+          "value": 0.0,
+          "count": 2
+        },
+        "empty_retrieval_rate": {
+          "value": 1.0,
+          "count": 2
+        }
+      },
+      "5": {
+        "precision_at_k": {
+          "value": null,
+          "count": 0
+        },
+        "recall_at_k": {
+          "value": null,
+          "count": 0
+        },
+        "reciprocal_rank": {
+          "value": null,
+          "count": 0
+        },
+        "hit_rate": {
+          "value": null,
+          "count": 0
+        },
+        "document_hit_rate": {
+          "value": null,
+          "count": 0
+        },
+        "page_hit_rate": {
+          "value": null,
+          "count": 0
+        },
+        "unanswerable_detection": {
+          "value": 1.0,
+          "count": 2
+        },
+        "average_retrieved_passages": {
+          "value": 0.0,
+          "count": 2
+        },
+        "empty_retrieval_rate": {
+          "value": 1.0,
+          "count": 2
+        }
+      }
+    },
+    "conflicting_version": {
+      "1": {
+        "precision_at_k": {
+          "value": 0.0,
+          "count": 2
+        },
+        "recall_at_k": {
+          "value": 0.0,
+          "count": 2
+        },
+        "reciprocal_rank": {
+          "value": 0.0,
+          "count": 2
+        },
+        "hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "document_hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "page_hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "unanswerable_detection": {
+          "value": null,
+          "count": 0
+        },
+        "average_retrieved_passages": {
+          "value": 0.0,
+          "count": 2
+        },
+        "empty_retrieval_rate": {
+          "value": 1.0,
+          "count": 2
+        }
+      },
+      "3": {
+        "precision_at_k": {
+          "value": 0.0,
+          "count": 2
+        },
+        "recall_at_k": {
+          "value": 0.0,
+          "count": 2
+        },
+        "reciprocal_rank": {
+          "value": 0.0,
+          "count": 2
+        },
+        "hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "document_hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "page_hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "unanswerable_detection": {
+          "value": null,
+          "count": 0
+        },
+        "average_retrieved_passages": {
+          "value": 0.0,
+          "count": 2
+        },
+        "empty_retrieval_rate": {
+          "value": 1.0,
+          "count": 2
+        }
+      },
+      "5": {
+        "precision_at_k": {
+          "value": 0.0,
+          "count": 2
+        },
+        "recall_at_k": {
+          "value": 0.0,
+          "count": 2
+        },
+        "reciprocal_rank": {
+          "value": 0.0,
+          "count": 2
+        },
+        "hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "document_hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "page_hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "unanswerable_detection": {
+          "value": null,
+          "count": 0
+        },
+        "average_retrieved_passages": {
+          "value": 0.0,
+          "count": 2
+        },
+        "empty_retrieval_rate": {
+          "value": 1.0,
+          "count": 2
+        }
+      }
+    },
+    "prompt_injection": {
+      "1": {
+        "precision_at_k": {
+          "value": 0.0,
+          "count": 2
+        },
+        "recall_at_k": {
+          "value": 0.0,
+          "count": 2
+        },
+        "reciprocal_rank": {
+          "value": 0.0,
+          "count": 2
+        },
+        "hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "document_hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "page_hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "unanswerable_detection": {
+          "value": null,
+          "count": 0
+        },
+        "average_retrieved_passages": {
+          "value": 0.0,
+          "count": 2
+        },
+        "empty_retrieval_rate": {
+          "value": 1.0,
+          "count": 2
+        }
+      },
+      "3": {
+        "precision_at_k": {
+          "value": 0.0,
+          "count": 2
+        },
+        "recall_at_k": {
+          "value": 0.0,
+          "count": 2
+        },
+        "reciprocal_rank": {
+          "value": 0.0,
+          "count": 2
+        },
+        "hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "document_hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "page_hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "unanswerable_detection": {
+          "value": null,
+          "count": 0
+        },
+        "average_retrieved_passages": {
+          "value": 0.0,
+          "count": 2
+        },
+        "empty_retrieval_rate": {
+          "value": 1.0,
+          "count": 2
+        }
+      },
+      "5": {
+        "precision_at_k": {
+          "value": 0.0,
+          "count": 2
+        },
+        "recall_at_k": {
+          "value": 0.0,
+          "count": 2
+        },
+        "reciprocal_rank": {
+          "value": 0.0,
+          "count": 2
+        },
+        "hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "document_hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "page_hit_rate": {
+          "value": 0.0,
+          "count": 2
+        },
+        "unanswerable_detection": {
+          "value": null,
+          "count": 0
+        },
+        "average_retrieved_passages": {
+          "value": 0.0,
+          "count": 2
+        },
+        "empty_retrieval_rate": {
+          "value": 1.0,
+          "count": 2
+        }
+      }
+    }
+  },
+  "questions": [
+    {
+      "question_id": "SYNTH-001",
+      "category": "direct_factual",
+      "expected_status": "SUPPORTED",
+      "relevant_passage_ids": [
+        "doc-SYNTH-ACADEMIC-GUIDE-V1-chunk-2"
+      ],
+      "relevant_document_ids": [
+        "SYNTH-ACADEMIC-GUIDE-V1"
+      ],
+      "relevant_pages": [
+        {
+          "document_id": "SYNTH-ACADEMIC-GUIDE-V1",
+          "page": 1
+        }
+      ],
+      "by_k": {
+        "1": {
+          "retrieved": [
+            {
+              "passage_id": "doc-SYNTH-ACADEMIC-GUIDE-V1-chunk-2",
+              "document_id": "SYNTH-ACADEMIC-GUIDE-V1",
+              "document": "Synthetic Academic Guide v1",
+              "page": 1,
+              "section": "Assessment and Attendance",
+              "cosine_distance": 0.6160861849784851,
+              "relevance_score": 0.3839138150215149,
+              "verification_status": "unverified",
+              "is_relevant": true
+            }
+          ],
+          "metrics": {
+            "precision_at_k": 1.0,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0,
+            "hit_rate": 1.0,
+            "document_hit_rate": 1.0,
+            "page_hit_rate": 1.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 1.0,
+            "empty_retrieval_rate": 0.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 27.4295,
+            "median": 24.9947,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 1.0107333333333335,
+            "median": 1.0458
+          },
+          "vector_query_latency_ms": {
+            "mean": 18.002033333333333,
+            "median": 16.4346
+          },
+          "empty_retrieval": false,
+          "retrieved_count": 1
+        },
+        "3": {
+          "retrieved": [
+            {
+              "passage_id": "doc-SYNTH-ACADEMIC-GUIDE-V1-chunk-2",
+              "document_id": "SYNTH-ACADEMIC-GUIDE-V1",
+              "document": "Synthetic Academic Guide v1",
+              "page": 1,
+              "section": "Assessment and Attendance",
+              "cosine_distance": 0.6160861849784851,
+              "relevance_score": 0.3839138150215149,
+              "verification_status": "unverified",
+              "is_relevant": true
+            }
+          ],
+          "metrics": {
+            "precision_at_k": 0.3333333333333333,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0,
+            "hit_rate": 1.0,
+            "document_hit_rate": 1.0,
+            "page_hit_rate": 1.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 1.0,
+            "empty_retrieval_rate": 0.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 22.217,
+            "median": 21.5415,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.8919,
+            "median": 0.8507
+          },
+          "vector_query_latency_ms": {
+            "mean": 16.132833333333334,
+            "median": 15.2028
+          },
+          "empty_retrieval": false,
+          "retrieved_count": 1
+        },
+        "5": {
+          "retrieved": [
+            {
+              "passage_id": "doc-SYNTH-ACADEMIC-GUIDE-V1-chunk-2",
+              "document_id": "SYNTH-ACADEMIC-GUIDE-V1",
+              "document": "Synthetic Academic Guide v1",
+              "page": 1,
+              "section": "Assessment and Attendance",
+              "cosine_distance": 0.6160861849784851,
+              "relevance_score": 0.3839138150215149,
+              "verification_status": "unverified",
+              "is_relevant": true
+            }
+          ],
+          "metrics": {
+            "precision_at_k": 0.2,
+            "recall_at_k": 1.0,
+            "reciprocal_rank": 1.0,
+            "hit_rate": 1.0,
+            "document_hit_rate": 1.0,
+            "page_hit_rate": 1.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 1.0,
+            "empty_retrieval_rate": 0.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 23.529,
+            "median": 21.666,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.8629666666666667,
+            "median": 0.852
+          },
+          "vector_query_latency_ms": {
+            "mean": 17.2481,
+            "median": 15.235
+          },
+          "empty_retrieval": false,
+          "retrieved_count": 1
+        }
+      },
+      "repetitions": 3
+    },
+    {
+      "question_id": "SYNTH-002",
+      "category": "direct_factual",
+      "expected_status": "SUPPORTED",
+      "relevant_passage_ids": [
+        "doc-SYNTH-ACADEMIC-GUIDE-V2-chunk-2"
+      ],
+      "relevant_document_ids": [
+        "SYNTH-ACADEMIC-GUIDE-V2"
+      ],
+      "relevant_pages": [
+        {
+          "document_id": "SYNTH-ACADEMIC-GUIDE-V2",
+          "page": 1
+        }
+      ],
+      "by_k": {
+        "1": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 47.43776666666667,
+            "median": 31.478,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.9063,
+            "median": 0.8851
+          },
+          "vector_query_latency_ms": {
+            "mean": 31.728466666666666,
+            "median": 21.2874
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "3": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 30.238133333333334,
+            "median": 31.0247,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.8945666666666666,
+            "median": 0.8707
+          },
+          "vector_query_latency_ms": {
+            "mean": 18.888266666666667,
+            "median": 19.6445
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "5": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 25.582866666666668,
+            "median": 23.8538,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.9047333333333334,
+            "median": 0.9155
+          },
+          "vector_query_latency_ms": {
+            "mean": 18.252533333333332,
+            "median": 16.8983
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        }
+      },
+      "repetitions": 3
+    },
+    {
+      "question_id": "SYNTH-003",
+      "category": "direct_factual",
+      "expected_status": "SUPPORTED",
+      "relevant_passage_ids": [
+        "doc-SYNTH-ACADEMIC-GUIDE-V2-chunk-2"
+      ],
+      "relevant_document_ids": [
+        "SYNTH-ACADEMIC-GUIDE-V2"
+      ],
+      "relevant_pages": [
+        {
+          "document_id": "SYNTH-ACADEMIC-GUIDE-V2",
+          "page": 1
+        }
+      ],
+      "by_k": {
+        "1": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 44.727999999999994,
+            "median": 39.8529,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.9045,
+            "median": 0.9167
+          },
+          "vector_query_latency_ms": {
+            "mean": 28.7365,
+            "median": 29.3451
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "3": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 27.438266666666667,
+            "median": 30.7097,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.9339666666666667,
+            "median": 0.936
+          },
+          "vector_query_latency_ms": {
+            "mean": 19.234933333333334,
+            "median": 21.4692
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "5": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 25.288866666666667,
+            "median": 24.453,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.8310666666666666,
+            "median": 0.8101
+          },
+          "vector_query_latency_ms": {
+            "mean": 19.188166666666667,
+            "median": 17.8128
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        }
+      },
+      "repetitions": 3
+    },
+    {
+      "question_id": "SYNTH-004",
+      "category": "multi_passage",
+      "expected_status": "SUPPORTED",
+      "relevant_passage_ids": [
+        "doc-SYNTH-ACADEMIC-GUIDE-V1-chunk-2",
+        "doc-SYNTH-ACADEMIC-GUIDE-V1-chunk-5"
+      ],
+      "relevant_document_ids": [
+        "SYNTH-ACADEMIC-GUIDE-V1"
+      ],
+      "relevant_pages": [
+        {
+          "document_id": "SYNTH-ACADEMIC-GUIDE-V1",
+          "page": 1
+        },
+        {
+          "document_id": "SYNTH-ACADEMIC-GUIDE-V1",
+          "page": 2
+        }
+      ],
+      "by_k": {
+        "1": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 20.6034,
+            "median": 20.4144,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.9112666666666667,
+            "median": 0.8914
+          },
+          "vector_query_latency_ms": {
+            "mean": 14.245133333333333,
+            "median": 14.5992
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "3": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 46.23086666666667,
+            "median": 44.3776,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.9688,
+            "median": 0.9126
+          },
+          "vector_query_latency_ms": {
+            "mean": 28.964566666666666,
+            "median": 33.0029
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "5": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 33.2196,
+            "median": 35.7769,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.9074,
+            "median": 0.9112
+          },
+          "vector_query_latency_ms": {
+            "mean": 23.558666666666667,
+            "median": 26.4156
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        }
+      },
+      "repetitions": 3
+    },
+    {
+      "question_id": "SYNTH-005",
+      "category": "multi_passage",
+      "expected_status": "SUPPORTED",
+      "relevant_passage_ids": [
+        "doc-SYNTH-ACADEMIC-GUIDE-V2-chunk-2",
+        "doc-SYNTH-ACADEMIC-GUIDE-V2-chunk-5"
+      ],
+      "relevant_document_ids": [
+        "SYNTH-ACADEMIC-GUIDE-V2"
+      ],
+      "relevant_pages": [
+        {
+          "document_id": "SYNTH-ACADEMIC-GUIDE-V2",
+          "page": 1
+        },
+        {
+          "document_id": "SYNTH-ACADEMIC-GUIDE-V2",
+          "page": 2
+        }
+      ],
+      "by_k": {
+        "1": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 24.4041,
+            "median": 24.3362,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.9996666666666667,
+            "median": 1.0096
+          },
+          "vector_query_latency_ms": {
+            "mean": 17.3543,
+            "median": 17.8184
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "3": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 29.8092,
+            "median": 25.0467,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.9123,
+            "median": 0.9646
+          },
+          "vector_query_latency_ms": {
+            "mean": 19.291766666666668,
+            "median": 16.4569
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "5": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 42.9517,
+            "median": 39.7043,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.9973333333333333,
+            "median": 0.9965
+          },
+          "vector_query_latency_ms": {
+            "mean": 32.905433333333335,
+            "median": 26.429
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        }
+      },
+      "repetitions": 3
+    },
+    {
+      "question_id": "SYNTH-006",
+      "category": "multi_document",
+      "expected_status": "SUPPORTED",
+      "relevant_passage_ids": [
+        "doc-SYNTH-ACADEMIC-GUIDE-V1-chunk-2",
+        "doc-SYNTH-ACADEMIC-GUIDE-V2-chunk-2"
+      ],
+      "relevant_document_ids": [
+        "SYNTH-ACADEMIC-GUIDE-V1",
+        "SYNTH-ACADEMIC-GUIDE-V2"
+      ],
+      "relevant_pages": [
+        {
+          "document_id": "SYNTH-ACADEMIC-GUIDE-V1",
+          "page": 1
+        },
+        {
+          "document_id": "SYNTH-ACADEMIC-GUIDE-V2",
+          "page": 1
+        }
+      ],
+      "by_k": {
+        "1": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 23.356666666666666,
+            "median": 22.5717,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.9536666666666667,
+            "median": 0.9576
+          },
+          "vector_query_latency_ms": {
+            "mean": 15.035366666666667,
+            "median": 15.1426
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "3": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 24.877066666666668,
+            "median": 24.0865,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.9117333333333334,
+            "median": 0.9232
+          },
+          "vector_query_latency_ms": {
+            "mean": 17.857966666666666,
+            "median": 16.977
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "5": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 40.41556666666666,
+            "median": 30.5026,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.8815666666666667,
+            "median": 0.8866
+          },
+          "vector_query_latency_ms": {
+            "mean": 30.343366666666668,
+            "median": 21.0989
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        }
+      },
+      "repetitions": 3
+    },
+    {
+      "question_id": "SYNTH-007",
+      "category": "unanswerable",
+      "expected_status": "NOT_FOUND",
+      "relevant_passage_ids": [],
+      "relevant_document_ids": [],
+      "relevant_pages": [],
+      "by_k": {
+        "1": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": null,
+            "recall_at_k": null,
+            "reciprocal_rank": null,
+            "hit_rate": null,
+            "document_hit_rate": null,
+            "page_hit_rate": null,
+            "unanswerable_detection": 1.0,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 24.692933333333333,
+            "median": 23.7546,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.8917666666666667,
+            "median": 0.891
+          },
+          "vector_query_latency_ms": {
+            "mean": 16.880733333333332,
+            "median": 17.2112
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "3": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": null,
+            "recall_at_k": null,
+            "reciprocal_rank": null,
+            "hit_rate": null,
+            "document_hit_rate": null,
+            "page_hit_rate": null,
+            "unanswerable_detection": 1.0,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 24.370366666666666,
+            "median": 25.8871,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.8155333333333333,
+            "median": 0.8305
+          },
+          "vector_query_latency_ms": {
+            "mean": 16.9454,
+            "median": 17.5669
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "5": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": null,
+            "recall_at_k": null,
+            "reciprocal_rank": null,
+            "hit_rate": null,
+            "document_hit_rate": null,
+            "page_hit_rate": null,
+            "unanswerable_detection": 1.0,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 26.2407,
+            "median": 27.2948,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.8477,
+            "median": 0.8431
+          },
+          "vector_query_latency_ms": {
+            "mean": 19.023733333333332,
+            "median": 19.31
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        }
+      },
+      "repetitions": 3
+    },
+    {
+      "question_id": "SYNTH-008",
+      "category": "unanswerable",
+      "expected_status": "NOT_FOUND",
+      "relevant_passage_ids": [],
+      "relevant_document_ids": [],
+      "relevant_pages": [],
+      "by_k": {
+        "1": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": null,
+            "recall_at_k": null,
+            "reciprocal_rank": null,
+            "hit_rate": null,
+            "document_hit_rate": null,
+            "page_hit_rate": null,
+            "unanswerable_detection": 1.0,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 42.1467,
+            "median": 37.4037,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 1.5137333333333332,
+            "median": 0.8693
+          },
+          "vector_query_latency_ms": {
+            "mean": 32.9641,
+            "median": 27.7161
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "3": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": null,
+            "recall_at_k": null,
+            "reciprocal_rank": null,
+            "hit_rate": null,
+            "document_hit_rate": null,
+            "page_hit_rate": null,
+            "unanswerable_detection": 1.0,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 24.172666666666668,
+            "median": 23.3107,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.8140999999999999,
+            "median": 0.8169
+          },
+          "vector_query_latency_ms": {
+            "mean": 16.5399,
+            "median": 16.9695
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "5": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": null,
+            "recall_at_k": null,
+            "reciprocal_rank": null,
+            "hit_rate": null,
+            "document_hit_rate": null,
+            "page_hit_rate": null,
+            "unanswerable_detection": 1.0,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 20.415433333333333,
+            "median": 19.6415,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.7954333333333333,
+            "median": 0.7831
+          },
+          "vector_query_latency_ms": {
+            "mean": 14.596966666666667,
+            "median": 14.1096
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        }
+      },
+      "repetitions": 3
+    },
+    {
+      "question_id": "SYNTH-009",
+      "category": "conflicting_version",
+      "expected_status": "CONFLICTING_SOURCES",
+      "relevant_passage_ids": [
+        "doc-SYNTH-ACADEMIC-GUIDE-V1-chunk-2",
+        "doc-SYNTH-ACADEMIC-GUIDE-V2-chunk-2"
+      ],
+      "relevant_document_ids": [
+        "SYNTH-ACADEMIC-GUIDE-V1",
+        "SYNTH-ACADEMIC-GUIDE-V2"
+      ],
+      "relevant_pages": [
+        {
+          "document_id": "SYNTH-ACADEMIC-GUIDE-V1",
+          "page": 1
+        },
+        {
+          "document_id": "SYNTH-ACADEMIC-GUIDE-V2",
+          "page": 1
+        }
+      ],
+      "by_k": {
+        "1": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 21.9973,
+            "median": 21.6935,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.8130666666666667,
+            "median": 0.8397
+          },
+          "vector_query_latency_ms": {
+            "mean": 15.519499999999999,
+            "median": 15.1208
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "3": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 40.862966666666665,
+            "median": 33.3998,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.9111,
+            "median": 0.8947
+          },
+          "vector_query_latency_ms": {
+            "mean": 30.34463333333333,
+            "median": 21.8174
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "5": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 23.246066666666668,
+            "median": 21.8863,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.9171666666666667,
+            "median": 0.9254
+          },
+          "vector_query_latency_ms": {
+            "mean": 17.119666666666667,
+            "median": 15.5678
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        }
+      },
+      "repetitions": 3
+    },
+    {
+      "question_id": "SYNTH-010",
+      "category": "conflicting_version",
+      "expected_status": "SUPPORTED",
+      "relevant_passage_ids": [
+        "doc-SYNTH-ACADEMIC-GUIDE-V2-chunk-2"
+      ],
+      "relevant_document_ids": [
+        "SYNTH-ACADEMIC-GUIDE-V2"
+      ],
+      "relevant_pages": [
+        {
+          "document_id": "SYNTH-ACADEMIC-GUIDE-V2",
+          "page": 1
+        }
+      ],
+      "by_k": {
+        "1": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 23.9044,
+            "median": 23.2083,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 1.0685333333333333,
+            "median": 0.9243
+          },
+          "vector_query_latency_ms": {
+            "mean": 16.8492,
+            "median": 16.1194
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "3": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 38.019933333333334,
+            "median": 27.1289,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 1.5813333333333333,
+            "median": 1.0493
+          },
+          "vector_query_latency_ms": {
+            "mean": 26.384066666666666,
+            "median": 20.4663
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "5": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 29.785533333333333,
+            "median": 28.8182,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.9653333333333333,
+            "median": 0.9497
+          },
+          "vector_query_latency_ms": {
+            "mean": 20.017233333333333,
+            "median": 20.8046
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        }
+      },
+      "repetitions": 3
+    },
+    {
+      "question_id": "SYNTH-011",
+      "category": "prompt_injection",
+      "expected_status": "SUPPORTED",
+      "relevant_passage_ids": [
+        "doc-SYNTH-ACADEMIC-GUIDE-V2-chunk-2"
+      ],
+      "relevant_document_ids": [
+        "SYNTH-ACADEMIC-GUIDE-V2"
+      ],
+      "relevant_pages": [
+        {
+          "document_id": "SYNTH-ACADEMIC-GUIDE-V2",
+          "page": 1
+        }
+      ],
+      "by_k": {
+        "1": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 21.880433333333333,
+            "median": 20.4418,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.9906666666666667,
+            "median": 0.9923
+          },
+          "vector_query_latency_ms": {
+            "mean": 14.653466666666667,
+            "median": 13.7149
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "3": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 23.876866666666665,
+            "median": 23.7944,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 1.0871333333333333,
+            "median": 1.0803
+          },
+          "vector_query_latency_ms": {
+            "mean": 16.6017,
+            "median": 16.4444
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "5": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 43.275533333333335,
+            "median": 35.3468,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 1.0367666666666666,
+            "median": 1.0423
+          },
+          "vector_query_latency_ms": {
+            "mean": 32.596333333333334,
+            "median": 27.4238
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        }
+      },
+      "repetitions": 3
+    },
+    {
+      "question_id": "SYNTH-012",
+      "category": "prompt_injection",
+      "expected_status": "SUPPORTED",
+      "relevant_passage_ids": [
+        "doc-SYNTH-ACADEMIC-GUIDE-V2-chunk-5"
+      ],
+      "relevant_document_ids": [
+        "SYNTH-ACADEMIC-GUIDE-V2"
+      ],
+      "relevant_pages": [
+        {
+          "document_id": "SYNTH-ACADEMIC-GUIDE-V2",
+          "page": 2
+        }
+      ],
+      "by_k": {
+        "1": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 25.049766666666667,
+            "median": 24.0332,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 1.0389,
+            "median": 1.0218
+          },
+          "vector_query_latency_ms": {
+            "mean": 16.350966666666665,
+            "median": 14.815
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "3": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 23.627766666666666,
+            "median": 23.4257,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.9994333333333333,
+            "median": 0.973
+          },
+          "vector_query_latency_ms": {
+            "mean": 16.6494,
+            "median": 15.6528
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        },
+        "5": {
+          "retrieved": [],
+          "metrics": {
+            "precision_at_k": 0.0,
+            "recall_at_k": 0.0,
+            "reciprocal_rank": 0.0,
+            "hit_rate": 0.0,
+            "document_hit_rate": 0.0,
+            "page_hit_rate": 0.0,
+            "unanswerable_detection": null,
+            "average_retrieved_passages": 0.0,
+            "empty_retrieval_rate": 1.0
+          },
+          "retrieval_latency_ms": {
+            "mean": 22.287133333333333,
+            "median": 22.9935,
+            "p95": null
+          },
+          "query_embedding_latency_ms": {
+            "mean": 0.9954666666666666,
+            "median": 0.9626
+          },
+          "vector_query_latency_ms": {
+            "mean": 15.575666666666667,
+            "median": 15.224
+          },
+          "empty_retrieval": true,
+          "retrieved_count": 0
+        }
+      },
+      "repetitions": 3
+    }
+  ],
+  "limitations": [
+    "Synthetic development corpus only; not real academic policy.",
+    "Deterministic lexical hashing substitute was used; scores do not measure OpenAI embedding performance.",
+    "Unanswerable detection here means no results passed the production threshold; it does not measure answer abstention.",
+    "Scores measure retrieval matching only, not semantic answer correctness or faithfulness."
+  ]
+}

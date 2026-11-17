@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d" viewBox="0 0 920 500">
+<title id="t">Phase 7C answer and citation metrics</title><desc id="d">Deterministic mock output; separate controlled and end-to-end experiments, answerable questions.</desc>
+<rect width="100%" height="100%" fill="white"/>
+<text x="460.0" y="34" text-anchor="middle" font-family="Arial" font-size="21" font-weight="bold">Phase 7C answer and citation metrics</text>
+<line x1="90" y1="400.0" x2="860" y2="400.0" stroke="#dce2e8"/>
+<text x="80" y="404.0" text-anchor="end" font-family="Arial" font-size="12">0.0</text>
+<line x1="90" y1="334.0" x2="860" y2="334.0" stroke="#dce2e8"/>
+<text x="80" y="338.0" text-anchor="end" font-family="Arial" font-size="12">0.2</text>
+<line x1="90" y1="268.0" x2="860" y2="268.0" stroke="#dce2e8"/>
+<text x="80" y="272.0" text-anchor="end" font-family="Arial" font-size="12">0.4</text>
+<line x1="90" y1="202.0" x2="860" y2="202.0" stroke="#dce2e8"/>
+<text x="80" y="206.0" text-anchor="end" font-family="Arial" font-size="12">0.6</text>
+<line x1="90" y1="136.0" x2="860" y2="136.0" stroke="#dce2e8"/>
+<text x="80" y="140.0" text-anchor="end" font-family="Arial" font-size="12">0.8</text>
+<line x1="90" y1="70.0" x2="860" y2="70.0" stroke="#dce2e8"/>
+<text x="80" y="74.0" text-anchor="end" font-family="Arial" font-size="12">1.0</text>
+<rect x="119.0" y="196.5" width="44" height="203.5" fill="#3568a8" rx="2"><title>Controlled Key facts: 0.617</title></rect>
+<text x="141.0" y="192.5" text-anchor="middle" font-family="Arial" font-size="10">0.62</text>
+<rect x="167.0" y="367.0" width="44" height="33.0" fill="#d18a32" rx="2"><title>End-to-end Key facts: 0.100</title></rect>
+<text x="189.0" y="363.0" text-anchor="middle" font-family="Arial" font-size="10">0.10</text>
+<text x="167.0" y="424" text-anchor="middle" font-family="Arial" font-size="12">Key facts</text>
+<rect x="273.0" y="86.5" width="44" height="313.5" fill="#3568a8" rx="2"><title>Controlled Claim support: 0.950</title></rect>
+<text x="295.0" y="82.5" text-anchor="middle" font-family="Arial" font-size="10">0.95</text>
+<rect x="321.0" y="70" width="44" height="330" fill="#d18a32" rx="2"><title>End-to-end Claim support: 1.000</title></rect>
+<text x="343.0" y="82" text-anchor="middle" font-family="Arial" font-size="10">1.00</text>
+<text x="321.0" y="424" text-anchor="middle" font-family="Arial" font-size="12">Claim support</text>
+<rect x="427.0" y="179.9546703296704" width="44" height="220.0453296703296" fill="#3568a8" rx="2"><title>Controlled Relevance: 0.667</title></rect>
+<text x="449.0" y="175.9546703296704" text-anchor="middle" font-family="Arial" font-size="10">0.67</text>
+<rect x="475.0" y="367.0" width="44" height="33.0" fill="#d18a32" rx="2"><title>End-to-end Relevance: 0.100</title></rect>
+<text x="497.0" y="363.0" text-anchor="middle" font-family="Arial" font-size="10">0.10</text>
+<text x="475.0" y="424" text-anchor="middle" font-family="Arial" font-size="12">Relevance</text>
+<rect x="581.0" y="70" width="44" height="330" fill="#3568a8" rx="2"><title>Controlled Citation P: 1.000</title></rect>
+<text x="603.0" y="82" text-anchor="middle" font-family="Arial" font-size="10">1.00</text>
+<rect x="629.0" y="367.0" width="44" height="33.0" fill="#d18a32" rx="2"><title>End-to-end Citation P: 0.100</title></rect>
+<text x="651.0" y="363.0" text-anchor="middle" font-family="Arial" font-size="10">0.10</text>
+<text x="629.0" y="424" text-anchor="middle" font-family="Arial" font-size="12">Citation P</text>
+<rect x="735.0" y="70" width="44" height="330" fill="#3568a8" rx="2"><title>Controlled Citation R: 1.000</title></rect>
+<text x="757.0" y="82" text-anchor="middle" font-family="Arial" font-size="10">1.00</text>
+<rect x="783.0" y="367.0" width="44" height="33.0" fill="#d18a32" rx="2"><title>End-to-end Citation R: 0.100</title></rect>
+<text x="805.0" y="363.0" text-anchor="middle" font-family="Arial" font-size="10">0.10</text>
+<text x="783.0" y="424" text-anchor="middle" font-family="Arial" font-size="12">Citation R</text>
+<rect x="90.0" y="460" width="12" height="12" fill="#3568a8"/>
+<text x="108.0" y="470" font-family="Arial" font-size="11">Controlled</text>
+<rect x="475.0" y="460" width="12" height="12" fill="#d18a32"/>
+<text x="493.0" y="470" font-family="Arial" font-size="11">End-to-end</text>
+</svg>

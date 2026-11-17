@@ -1,0 +1,424 @@
+RAARA — COMPLETE PROJECT STUDY GUIDE
+From first principles to implementation details
+======================================================================
+
+Purpose of this guide
+---------------------
+This document explains RAARA from the ground up for a new project member
+or for a student preparing a demonstration. It describes the architecture
+currently present in the repository. Configuration and implementation may
+change; check backend/README.md and backend/.env.example before running it.
+
+1. What RAARA is
+----------------
+RAARA means Retrieval-Augmented Academic Regulatory Assistant. It is a
+document-grounded web application. A user can upload a PDF, ask a question
+about accessible documents, and receive an answer accompanied by evidence
+passages and source metadata. It also supports conversations, document
+summaries, and administrator document review.
+
+The problem it addresses is that policy questions often require exact
+wording, conditions, dates, exceptions, and page references. A general
+language model may sound confident while inventing a rule. RAARA therefore
+searches stored document passages first and gives the language model only
+retrieved evidence for document-grounded answers. Citation checks and
+abstention logic reduce unsupported answers.
+
+Important boundary: RAARA is a research/student project and its current
+document collection is not a certified source of university policy. A
+synthetic or user-uploaded document is not an official regulation. Even a
+valid citation only proves that the cited passage exists in the stored
+document; it does not independently prove that the interpretation is
+semantically correct or that the document is authoritative and current.
+
+2. Essential concepts
+---------------------
+PDF extraction: reading text from each page of a PDF while retaining the
+page number and detected section heading. Scanned image-only PDFs need OCR;
+the current ingestion route does not provide OCR.
+
+Chunk: a bounded piece of extracted text. Very long documents are divided
+into chunks so they can be embedded, indexed, searched, and supplied to a
+model within a manageable context window.
+
+Token: a unit used by language models and tokenizers. Tokens are not exactly
+words. The current tokenizer uses tiktoken's cl100k_base encoding and the
+configured initial chunk settings are 700 tokens with 100-token overlap.
+Overlap repeats a small boundary region so an important sentence split at
+the edge of two chunks can still be retrieved with its neighboring context.
+
+Embedding: a vector of numbers representing semantic properties of text.
+Similar meanings tend to have vectors pointing in similar directions.
+RAARA uses local sentence-transformers/all-MiniLM-L6-v2 embeddings, with
+384 dimensions, rather than a hosted embedding API.
+
+Vector database: ChromaDB stores each chunk, its vector, and its metadata.
+At query time RAARA embeds the question and searches for nearby vectors.
+The active collection is raara_documents_groq_local_384. Older collections
+are kept separately; vectors with different dimensions must not be mixed.
+
+Cosine distance and relevance: the retriever uses Chroma's cosine distance
+and converts it to similarity as 1 - distance. It filters candidates by a
+configurable relevance threshold. The configured threshold is a starting
+setting, not a universal guarantee of relevance.
+
+RAG: Retrieval-Augmented Generation. Retrieval finds relevant source text;
+generation turns that evidence into a readable response. This is different
+from training or permanently teaching the model. The model does not learn
+uploaded documents permanently; each answer uses the current retrieval and
+conversation context.
+
+Abstention: returning that there is not enough evidence, instead of making
+up a confident answer. A NOT_FOUND answer is an intentional safety outcome.
+
+3. Architecture at a glance
+---------------------------
+
+  Browser (React + Vite)
+       | HTTP / JSON, bearer token
+       v
+  FastAPI routes (/api/...)
+       |-- Authentication and authorization
+       |-- Upload / conversation / admin workflows
+       v
+  Application services
+       |-- PDF extraction -> cleaning -> token chunks
+       |-- Local sentence-transformers embedding (384 values)
+       |-- ChromaDB persistent vector collection
+       |-- Request interpretation and semantic retrieval
+       |-- Groq structured chat generation
+       |-- Citation and factual/numerical checks
+       v
+  SQLite: users, document records, conversations, messages
+  Filesystem: original uploaded PDFs
+  ChromaDB: searchable chunk vectors and metadata
+
+SQLite, PDF storage, and ChromaDB serve different purposes. SQLite holds
+relational application records and ownership. The filesystem preserves
+uploaded originals. ChromaDB is a search index. A Chroma result is not a
+replacement for the original PDF or the database record.
+
+4. Technology and repository map
+---------------------------------
+Backend: Python 3.11, FastAPI, Uvicorn, Pydantic, SQLAlchemy, SQLite,
+PyMuPDF, tiktoken, ChromaDB, Groq SDK, sentence-transformers and PyTorch.
+
+Frontend: React 19 and Vite. The frontend calls the backend through the
+same-origin /api proxy during development. Playwright is present for browser
+acceptance tests, and Node's test runner is used for frontend tests.
+
+Useful project areas:
+  backend/app/main.py                 app creation, startup, health routes
+  backend/app/config.py               environment-backed settings
+  backend/app/routes/                 HTTP endpoints and validation
+  backend/app/auth/                   authentication dependencies
+  backend/app/database/models.py      SQLAlchemy tables
+  backend/app/services/               ingestion, retrieval, generation, etc.
+  backend/app/prompting/              prompt configurations A, B and C
+  backend/app/evaluation/             experiment runner and evaluation code
+  backend/tests/                      automated backend tests and fixtures
+  backend/evaluation/                 benchmark datasets, artifacts, reports
+  frontend/src/                       React application and API client
+  frontend/e2e/                       browser acceptance code
+  backend/.env.example                configuration template; contains no key
+  backend/README.md                  detailed environment/run instructions
+
+Core backend services include document_processor.py, chunker.py,
+embeddings.py, vector_store.py, ingestion.py, request_interpreter.py,
+retriever.py, generator.py, citation_verifier.py, factual_verifier.py,
+document_summarizer.py, conversations.py, security.py, and reindex.py.
+
+5. Document upload and indexing: detailed path
+----------------------------------------------
+1) A logged-in user submits a PDF to POST /api/documents/upload.
+2) The API validates the upload and associates it with the user.
+3) Ingestion checks the file type/size, computes SHA-256, and detects an
+   identical file already in the SQLite document table.
+4) PyMuPDF opens the PDF. Text is extracted page by page; text cleaning
+   normalizes whitespace while preserving useful line structure. Heading
+   cues are used to associate text with section labels.
+5) The TokenChunker tokenizes text using cl100k_base and builds 700-token
+   chunks with 100-token overlap (unless settings are changed).
+6) Each chunk carries metadata: document ID/name/type, page, section,
+   academic year, version, effective date, source type, verification
+   status, and uploader ownership information.
+7) The local sentence-transformers model turns chunks into normalized
+   384-number vectors in batches.
+8) The original PDF is saved under the configured upload directory and the
+   vectors/metadata are added to the active Chroma collection.
+9) The SQLite record is committed with checksum, version, page/chunk counts,
+   processing status, storage path, and review state.
+
+On upload, verification_status is unverified. Uploading never establishes
+official authority. The duplicate rule is based on exact PDF checksum;
+version tracking distinguishes successive copies/versions for a document.
+An administrator can review or reject a document, but review itself is an
+internal application decision, not proof of university provenance.
+
+6. Question answering: detailed path
+------------------------------------
+1) The browser sends POST /api/chat with the user's question, optional
+   conversation_id, optional document_id, optional prompt_type (A/B/C), and
+   optional filters/top_k. Prompt C is the default.
+2) FastAPI validates the request, checks the bearer token, loads owned
+   conversation history, and determines which documents this account may
+   access. A selected document is checked against that allow-list before
+   it can scope a retrieval request. Students see their own uploads;
+   administrators have broader review access according to route rules.
+3) The model-driven request interpreter decides whether the input is a
+   conversation, clarification, ordinary evidence question, comparison, or
+   whole-document summary. It can resolve conversational references using
+   bounded conversation history. This is intended to avoid hardcoded
+   greeting/keyword routing.
+4) For an evidence question, the interpreter supplies a semantic retrieval
+   query. The local embedding service embeds that query; Chroma returns
+   candidate chunks. Metadata filters and access restrictions constrain
+   candidates. Relevance filtering uses cosine similarity and configured
+   top-K (default 5).
+5) Groq receives the question and retrieved context in a structured
+   response request. Prompt configurations A, B, and C differ in
+   instruction detail, while the application controls citation metadata.
+   Retrieved content is treated as untrusted evidence, not instructions.
+6) The structured output refers to retrieved passage IDs. Application code
+   maps those IDs back to actual retrieved passages and constructs evidence
+   and citations from stored metadata, rather than trusting model-invented
+   page or document names.
+7) Citation verification checks that cited source/page/passage identities
+   exist in the retrieved context. Factual/numerical checks add safeguards
+   for numbers, scores, percentages, dates, ranges and similar claims.
+8) If evidence is absent, irrelevant, conflicting, unverifiable, or
+   insufficient, the response may be PARTIALLY_SUPPORTED, NOT_FOUND, or
+   CONFLICTING_SOURCES. Unverified status should remain visible.
+9) If the chat belongs to a conversation, user question and assistant
+   structured response are persisted, allowing later history and follow-up.
+
+Citation identity validation is not the same as semantic faithfulness.
+The project explicitly reports semantic faithfulness as NOT_VERIFIED where
+it has not been independently established. This is an important limitation
+to state in a demo.
+
+7. Whole-document summaries
+---------------------------
+Long PDFs can exceed a single model context. DocumentSummarizer loads the
+already authorized document's indexed chunks, builds hierarchical summary
+nodes, and maps final citations back to original passages. This approach
+lets the system cover a larger document than a single prompt could contain.
+Coverage disclosures indicate whether all material was processed. A valid
+citation on one sentence must not be interpreted as proving every other
+sentence in an intermediate summary. Summary coverage and semantic support
+remain separate concerns.
+
+8. Prompt experiments and evaluation
+------------------------------------
+The project has three prompt configurations:
+  A — Basic baseline: simple assistant direction and retrieved context.
+  B — Role-based contextual: defines the academic assistant, gives explicit
+      evidence and citation instructions, and handles unsupported answers.
+  C — Structured evidence-constrained: adds evidence limits, abstention,
+      conflict/version/verification awareness, injection resistance, and
+      structured output requirements.
+
+The Phase 7 evaluation work separates retrieval performance from answer
+quality. Retrieval metrics include Precision@K, Recall@K, MRR and hit rate.
+Answer-quality evaluation includes exact match, key-fact coverage, claim
+support/contradiction, relevance, citation precision/recall, document/page
+accuracy, abstention behavior, false answers and fabricated citations.
+Metric denominators matter: results on a small synthetic corpus do not
+predict performance on real, diverse university regulations. Offline
+deterministic embedding substitutes diagnose pipeline behavior but do not
+measure the production local or hosted model's semantic quality.
+
+Evaluation artifacts and their reports should be preserved. The held-out
+official evidence dataset is not ready merely because evaluation code
+exists. Historical project reports explicitly noted missing human-approved
+official documents and limitations; consult the latest Phase reports before
+quoting benchmark numbers or calling the corpus authoritative.
+
+9. Authentication, ownership and data safety
+---------------------------------------------
+Registration creates a student account. Login issues an access token.
+Protected endpoints use that token. Passwords are hashed; raw passwords
+must never be persisted or returned. Conversation and document routes
+enforce ownership. A user must not widen search by submitting another
+user's document ID. Administrator access is separately provisioned and
+review endpoints require the administrator role.
+
+Keep backend/.env private. It may contain GROQ_API_KEY and JWT_SECRET_KEY.
+Never paste values into chat, screenshots, frontend environment variables,
+reports, shell history, or logs. Health reporting should reveal only safe
+configuration state such as provider/model and whether a credential exists.
+
+The application currently uses an isolated vector collection named
+raara_documents_groq_local_384 for local 384-dimensional embeddings. Older
+Gemini vectors may have 768 dimensions and must not be mixed with these.
+Reindexing is an explicit operation: inventory/preflight first, then an
+explicit --apply step after backup and path review. Old collections should
+not be deleted as part of migration.
+
+For tests and acceptance, redirect SQLite, Chroma, and upload paths to a
+fresh temporary directory. Do not run an acceptance harness against the
+normal configured paths. Synthetic PDFs must be clearly marked NOT OFFICIAL
+UNIVERSITY POLICY.
+
+10. Current Groq/local embedding configuration
+----------------------------------------------
+The current code requires AI_PROVIDER=groq and EMBEDDING_PROVIDER=local.
+Chat is sent to Groq using GROQ_CHAT_MODEL, currently configured by the
+project owner as openai/gpt-oss-20b. This is a model identifier served by
+Groq; it does not mean the app sends requests to OpenAI. The Groq SDK uses
+structured JSON Schema output for the request/answer/verifier tasks.
+
+Embeddings use sentence-transformers/all-MiniLM-L6-v2 locally on CPU and
+must have exactly 384 dimensions. No Gemini or OpenAI embedding key or
+endpoint is part of this provider setup. The first embedding request may
+load model weights from the local cache or download them if unavailable.
+
+11. Run the project in Ubuntu WSL
+---------------------------------
+Use Ubuntu commands in Ubuntu/WSL, not Windows PowerShell syntax. The
+project is mounted at /mnt/c/prompt_mini_proj. Run backend and frontend in
+two separate Ubuntu terminals.
+
+Backend terminal:
+  cd /mnt/c/prompt_mini_proj/backend
+  export TIKTOKEN_CACHE_DIR="$HOME/.cache/tiktoken"
+  ./.venv-wsl311/bin/python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+Frontend terminal (load nvm if a new terminal does not already have Node):
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+  cd /mnt/c/prompt_mini_proj/frontend
+  npm run dev -- --host 0.0.0.0 --port 5173
+
+Then open http://127.0.0.1:5173/ in the browser. Backend API docs are at
+http://127.0.0.1:8000/docs and health at http://127.0.0.1:8000/api/health.
+Leave both terminal processes running while demonstrating. Stop each with
+Ctrl+C. If a port is already in use, check existing processes before
+starting another copy.
+
+The .env file is read relative to the backend working directory. Start the
+backend after cd into backend. Keep the existing .env and its database,
+upload and Chroma paths; do not replace it with the template. Confirm the
+active values locally without printing secrets.
+
+12. Dependency setup notes for the current WSL environment
+---------------------------------------------------------
+The user has already established a Python 3.11 WSL environment at
+backend/.venv-wsl311. In that environment, ordinary python -m pip was not
+available; uv is the environment installer. The recorded successful repair
+was installation of CPU PyTorch followed by backend requirements, then a
+local embedding dimension check returning 384. These commands describe the
+recorded environment setup; do not rerun a large PyTorch install unless
+needed:
+
+  cd /mnt/c/prompt_mini_proj/backend
+  UV_LINK_MODE=copy uv pip install --python .venv-wsl311/bin/python --index https://download.pytorch.org/whl/cpu torch
+  uv pip install --python .venv-wsl311/bin/python -r requirements.txt
+  ./.venv-wsl311/bin/python -c 'import torch, torch.distributed, sentence_transformers; print("imports OK", torch.__version__)'
+  ./.venv-wsl311/bin/python -c 'from app.services.embeddings import create_embedding_service; print(len(create_embedding_service().embed_query("RAARA local check")))'
+
+The expected embedding output is 384. A sentence-transformers warning about
+an unauthenticated Hugging Face Hub request is not an API key failure; model
+download availability/rate limits can still affect a first run. For tests,
+use mocked model calls and blank external API credentials.
+
+13. Suggested live demonstration sequence
+------------------------------------------
+1) Start backend and frontend and show the dashboard.
+2) Register or log into a disposable student account.
+3) Upload a clearly labeled synthetic PDF. Explain that upload status is
+   unverified and does not make it official policy.
+4) Show document metadata, page/chunk counts, and unverified badge.
+5) Ask a question answered directly in the synthetic PDF. Point out the
+   answer, quoted evidence, source name, page and validation status.
+6) Ask a question absent from the PDF. Show an abstention instead of an
+   invented university regulation.
+7) Ask a follow-up in the same conversation and show persisted history.
+8) If allowed, demonstrate administrator pending-document review using an
+   administrator account. Explain review is an internal workflow only.
+9) Explain separate subsystems: PDF -> chunks -> local vectors -> semantic
+   search -> Groq answer -> application-controlled citations.
+
+Useful demo prompts depend on the exact fixture contents. Do not claim a
+synthetic rule applies to PES University or another institution.
+
+14. Testing and honest status reporting
+---------------------------------------
+Backend automated tests use pytest and should not make paid Groq calls.
+Frontend tests use npm test; production compilation uses npm run build.
+Browser acceptance uses npm run test:e2e where a browser/runtime is
+available. Passing unit tests or a production build is not proof that a
+live Groq request, PDF upload, browser interaction, citation correctness,
+or semantic faithfulness has been accepted.
+
+Recorded environment facts from this project session:
+  - Local sentence-transformers import succeeded after CPU torch repair.
+  - torch.distributed imported; torch reported 2.15.0+cpu.
+  - A real local embedding query returned 384 dimensions.
+  - Earlier targeted Groq structured-output checks were reported as passing
+    and selected real Groq requests had succeeded after credentials were
+    corrected. This guide is not a substitute for a fresh live check.
+  - A complete backend suite has previously experienced an environment-
+    specific Windows/AnyIO TestClient startup stall. Other historical runs
+    also recorded a Phase 9A fingerprint mismatch. Check the latest report
+    and actual test output before presenting a current pass count.
+  - Do not claim all live acceptance scenarios passed unless each was
+    actually executed against isolated storage and the real provider.
+
+15. Troubleshooting quick reference
+-----------------------------------
+Wrong terminal syntax: `cd /d C:\...` is PowerShell/CMD syntax, not Ubuntu.
+In WSL use `cd /mnt/c/prompt_mini_proj/frontend`.
+
+npm cannot find package.json: you are in the wrong directory or using
+Windows npm from an Ubuntu home directory. Check `pwd`, `which node`, and
+`ls package.json`; use the frontend directory and Linux Node installed with
+nvm.
+
+Python has no pip: this environment is managed by uv. Use `uv pip install
+--python .venv-wsl311/bin/python ...` instead of `python -m pip`.
+
+sentence_transformers says PyTorch missing: verify `import torch` and
+`import torch.distributed`. Install the CPU PyTorch wheel into the exact
+`.venv-wsl311` interpreter, then verify the embedder dimensions are 384.
+
+Tokenizer cache missing: set TIKTOKEN_CACHE_DIR to the persistent
+`$HOME/.cache/tiktoken`; verify cl100k_base in a fresh offline process
+before claiming offline test readiness. Do not change chunking/tokenizer.
+
+Groq auth or structured output error: distinguish 401 credentials, 403
+permissions, 429 quota/rate limits, and 400 request/schema errors. Inspect
+safe status/model/schema diagnostics, never the key or private prompt text.
+
+Upload works but no retrieval: check processing_status, vector_sync_status,
+the active collection name, 384-dimensional configuration, and user
+ownership filters. Do not delete legacy collections or production data.
+
+16. What to emphasize in a teacher presentation
+------------------------------------------------
+Problem: policy answers need evidence, not plausible-sounding guesses.
+Approach: retrieve relevant PDF passages first, then generate a constrained
+answer and validate the source references.
+Engineering: separate SQL records, original files, and vector search;
+preserve page/section/version/verification metadata throughout the flow.
+Safety: enforce user ownership, keep uploads unverified, treat retrieved
+text as untrusted, validate citation identities, and abstain when evidence
+is insufficient.
+Evaluation: compare retrieval and answer metrics, report denominators, and
+distinguish synthetic/offline results from real policy performance.
+Limitations: source authority still needs human confirmation; OCR is not
+provided for scanned PDFs; citation identity is not semantic proof; local
+model quality and live service availability need current verification.
+
+Short explanation to say aloud:
+“RAARA is a web-based academic document assistant. It extracts text from a
+user's PDF, preserves page and section metadata, splits the text into
+overlapping token-sized chunks, and embeds those chunks locally. When a
+user asks a question, the system checks access, searches the user's allowed
+documents by semantic similarity, and sends the retrieved passages to a
+Groq chat model. The backend maps model-selected evidence IDs back to real
+stored passages, validates citation metadata, and abstains when evidence is
+not sufficient. Uploaded documents remain unverified until reviewed, and
+review does not itself prove official authority.”
+
+End of guide.

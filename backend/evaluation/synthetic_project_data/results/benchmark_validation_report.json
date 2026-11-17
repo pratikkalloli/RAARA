@@ -1,0 +1,6548 @@
+{
+  "report": "RAARA Phase 9A Synthetic Corpus Benchmark Validation",
+  "created_at_utc": "2026-11-13T04:46:00.208063+00:00",
+  "dataset_version": "9A.1.0",
+  "dataset_classification": {
+    "dataset_type": "SYNTHETIC_PROJECT_DATA",
+    "source_type": "PROJECT_AUTHORED",
+    "is_official_university_policy": false
+  },
+  "validation": {
+    "dataset_version": "9A.1.0",
+    "dataset_type": "SYNTHETIC_PROJECT_DATA",
+    "is_official_university_policy": false,
+    "question_count": 50,
+    "question_categories": {
+      "assessment_calculation": 6,
+      "attendance_eligibility": 6,
+      "backlogs_supplementary": 5,
+      "conflicting_version": 3,
+      "direct_factual": 8,
+      "grading_sgpa_cgpa": 6,
+      "lateral_entry_progression": 5,
+      "multi_document": 3,
+      "multi_passage": 4,
+      "prompt_injection": 2,
+      "unanswerable": 2
+    },
+    "split_counts": {
+      "conflict": 3,
+      "development": 36,
+      "held_out": 11
+    },
+    "primary_policy_document_count": 10,
+    "conflict_fixture_document_count": 2,
+    "conflict_manifest_total_documents": 12,
+    "evidence_reference_count": 86,
+    "validated_question_numeric_calculations": 2,
+    "independently_recomputed_policy_worked_examples": 2,
+    "numerical_policy_examples_independently_validated": [
+      "weighted final score = 77",
+      "example SGPA = 8.57",
+      "example CGPA = 8.50"
+    ],
+    "development_held_out_exact_overlap": false,
+    "unanswerable_topic_scan": "hostel curfew and tuition-fee refund deadline absent from primary synthetic policy text",
+    "official_registry_modified": false,
+    "production_storage_accessed": false,
+    "status": "PASS"
+  },
+  "benchmark_execution": {
+    "development_questions_evaluated": 36,
+    "held_out_questions_evaluated": 0,
+    "controlled_conflict_questions_evaluated": 0,
+    "prompt_comparison_artifact": "results\\synthetic_prompt_comparison.json",
+    "experiment_conditions": [
+      "CONTROLLED_EVIDENCE",
+      "END_TO_END_RAG"
+    ],
+    "prompts": [
+      "A",
+      "B",
+      "C"
+    ],
+    "model": "deterministic-extractive-mock-v1",
+    "embedding": "deterministic-tfidf-hash-v1",
+    "production_retrieval_settings_changed": false,
+    "production_storage_touched": false,
+    "live_openai_calls": false,
+    "semantic_correctness_verified": false,
+    "interpretation": "The deterministic mock ignores natural-language prompt instructions and returns the same extractive output for A, B, and C. Metric equality is an adapter limitation, not evidence that the prompts are equivalent for a real language model."
+  },
+  "retrieval_and_answer_diagnostics": {
+    "CONTROLLED_EVIDENCE": {
+      "A": {
+        "all": {
+          "normalized_exact_match": {
+            "value": 0.0,
+            "count": 35
+          },
+          "key_fact_coverage": {
+            "value": 0.2571428571428571,
+            "count": 35
+          },
+          "claim_support_rate": {
+            "value": 0.13809523809523808,
+            "count": 35
+          },
+          "claim_contradiction_rate": {
+            "value": 0.05714285714285714,
+            "count": 35
+          },
+          "claim_not_enough_evidence_rate": {
+            "value": 0.8047619047619047,
+            "count": 35
+          },
+          "reference_correct_claim_rate": {
+            "value": 0.9,
+            "count": 10
+          },
+          "reference_claim_contradiction_rate": {
+            "value": 0.1,
+            "count": 10
+          },
+          "reference_claim_not_evaluated_rate": {
+            "value": 0.7333333333333333,
+            "count": 35
+          },
+          "answer_relevance": {
+            "value": 0.699297052154195,
+            "count": 35
+          },
+          "off_topic_rate": {
+            "value": 0.0,
+            "count": 35
+          },
+          "citation_precision": {
+            "value": 1.0,
+            "count": 35
+          },
+          "citation_claim_support_precision": {
+            "value": 0.2,
+            "count": 35
+          },
+          "citation_recall": {
+            "value": 1.0,
+            "count": 35
+          },
+          "document_accuracy": {
+            "value": 1.0,
+            "count": 35
+          },
+          "page_accuracy": {
+            "value": 1.0,
+            "count": 35
+          },
+          "structural_validity_rate": {
+            "value": 1.0,
+            "count": 35
+          },
+          "correct_abstention_rate": {
+            "value": 1.0,
+            "count": 1
+          },
+          "false_answer_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "fabricated_citation_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "unsupported_claim_rate": {
+            "value": 0.8619047619047618,
+            "count": 35
+          }
+        },
+        "answerable": {
+          "normalized_exact_match": {
+            "value": 0.0,
+            "count": 35
+          },
+          "key_fact_coverage": {
+            "value": 0.2571428571428571,
+            "count": 35
+          },
+          "claim_support_rate": {
+            "value": 0.13809523809523808,
+            "count": 35
+          },
+          "claim_contradiction_rate": {
+            "value": 0.05714285714285714,
+            "count": 35
+          },
+          "claim_not_enough_evidence_rate": {
+            "value": 0.8047619047619047,
+            "count": 35
+          },
+          "reference_correct_claim_rate": {
+            "value": 0.9,
+            "count": 10
+          },
+          "reference_claim_contradiction_rate": {
+            "value": 0.1,
+            "count": 10
+          },
+          "reference_claim_not_evaluated_rate": {
+            "value": 0.7333333333333333,
+            "count": 35
+          },
+          "answer_relevance": {
+            "value": 0.699297052154195,
+            "count": 35
+          },
+          "off_topic_rate": {
+            "value": 0.0,
+            "count": 35
+          },
+          "citation_precision": {
+            "value": 1.0,
+            "count": 35
+          },
+          "citation_claim_support_precision": {
+            "value": 0.2,
+            "count": 35
+          },
+          "citation_recall": {
+            "value": 1.0,
+            "count": 35
+          },
+          "document_accuracy": {
+            "value": 1.0,
+            "count": 35
+          },
+          "page_accuracy": {
+            "value": 1.0,
+            "count": 35
+          },
+          "structural_validity_rate": {
+            "value": 1.0,
+            "count": 35
+          },
+          "correct_abstention_rate": {
+            "value": null,
+            "count": 0
+          },
+          "false_answer_rate": {
+            "value": null,
+            "count": 0
+          },
+          "fabricated_citation_rate": {
+            "value": null,
+            "count": 0
+          },
+          "unsupported_claim_rate": {
+            "value": 0.8619047619047618,
+            "count": 35
+          }
+        },
+        "unanswerable": {
+          "normalized_exact_match": {
+            "value": null,
+            "count": 0
+          },
+          "key_fact_coverage": {
+            "value": null,
+            "count": 0
+          },
+          "claim_support_rate": {
+            "value": null,
+            "count": 0
+          },
+          "claim_contradiction_rate": {
+            "value": null,
+            "count": 0
+          },
+          "claim_not_enough_evidence_rate": {
+            "value": null,
+            "count": 0
+          },
+          "reference_correct_claim_rate": {
+            "value": null,
+            "count": 0
+          },
+          "reference_claim_contradiction_rate": {
+            "value": null,
+            "count": 0
+          },
+          "reference_claim_not_evaluated_rate": {
+            "value": null,
+            "count": 0
+          },
+          "answer_relevance": {
+            "value": null,
+            "count": 0
+          },
+          "off_topic_rate": {
+            "value": null,
+            "count": 0
+          },
+          "citation_precision": {
+            "value": null,
+            "count": 0
+          },
+          "citation_claim_support_precision": {
+            "value": null,
+            "count": 0
+          },
+          "citation_recall": {
+            "value": null,
+            "count": 0
+          },
+          "document_accuracy": {
+            "value": null,
+            "count": 0
+          },
+          "page_accuracy": {
+            "value": null,
+            "count": 0
+          },
+          "structural_validity_rate": {
+            "value": null,
+            "count": 0
+          },
+          "correct_abstention_rate": {
+            "value": 1.0,
+            "count": 1
+          },
+          "false_answer_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "fabricated_citation_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "unsupported_claim_rate": {
+            "value": null,
+            "count": 0
+          }
+        },
+        "by_category": {
+          "direct_factual": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 7
+            },
+            "key_fact_coverage": {
+              "value": 0.14285714285714285,
+              "count": 7
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 7
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 7
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 7
+            },
+            "reference_correct_claim_rate": {
+              "value": 0.5,
+              "count": 2
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.5,
+              "count": 2
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.7142857142857143,
+              "count": 7
+            },
+            "answer_relevance": {
+              "value": 0.8353174603174603,
+              "count": 7
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 7
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 7
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 7
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 7
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 7
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 7
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 7
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 7
+            }
+          },
+          "attendance_eligibility": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 5
+            },
+            "key_fact_coverage": {
+              "value": 0.4,
+              "count": 5
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 5
+            },
+            "claim_contradiction_rate": {
+              "value": 0.4,
+              "count": 5
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 0.6,
+              "count": 5
+            },
+            "reference_correct_claim_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.6,
+              "count": 5
+            },
+            "answer_relevance": {
+              "value": 0.5557142857142857,
+              "count": 5
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 5
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 5
+            },
+            "citation_claim_support_precision": {
+              "value": 0.4,
+              "count": 5
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 5
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 5
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 5
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 5
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 5
+            }
+          },
+          "assessment_calculation": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 5
+            },
+            "key_fact_coverage": {
+              "value": 0.6,
+              "count": 5
+            },
+            "claim_support_rate": {
+              "value": 0.06666666666666667,
+              "count": 5
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 5
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 0.9333333333333332,
+              "count": 5
+            },
+            "reference_correct_claim_rate": {
+              "value": 1.0,
+              "count": 3
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 3
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.5333333333333333,
+              "count": 5
+            },
+            "answer_relevance": {
+              "value": 0.7188095238095238,
+              "count": 5
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 5
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 5
+            },
+            "citation_claim_support_precision": {
+              "value": 0.1,
+              "count": 5
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 5
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 5
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 5
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 5
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 0.9333333333333332,
+              "count": 5
+            }
+          },
+          "grading_sgpa_cgpa": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 4
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_support_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "answer_relevance": {
+              "value": 0.7125,
+              "count": 4
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 4
+            },
+            "citation_claim_support_precision": {
+              "value": 1.0,
+              "count": 4
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 4
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 4
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 4
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 0.0,
+              "count": 4
+            }
+          },
+          "backlogs_supplementary": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 4
+            },
+            "key_fact_coverage": {
+              "value": 0.5,
+              "count": 4
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "reference_correct_claim_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.5,
+              "count": 4
+            },
+            "answer_relevance": {
+              "value": 0.6666666666666667,
+              "count": 4
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 4
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 4
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 4
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 4
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 4
+            }
+          },
+          "lateral_entry_progression": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 4
+            },
+            "key_fact_coverage": {
+              "value": 0.25,
+              "count": 4
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "reference_correct_claim_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.75,
+              "count": 4
+            },
+            "answer_relevance": {
+              "value": 0.7805555555555556,
+              "count": 4
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 4
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 4
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 4
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 4
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 4
+            }
+          },
+          "multi_passage": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 3
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 3
+            },
+            "claim_support_rate": {
+              "value": 0.16666666666666666,
+              "count": 3
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 3
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 0.8333333333333334,
+              "count": 3
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 1.0,
+              "count": 3
+            },
+            "answer_relevance": {
+              "value": 0.5666666666666667,
+              "count": 3
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 3
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 3
+            },
+            "citation_claim_support_precision": {
+              "value": 0.16666666666666666,
+              "count": 3
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 3
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 3
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 3
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 3
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 0.8333333333333334,
+              "count": 3
+            }
+          },
+          "multi_document": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 2
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 2
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "answer_relevance": {
+              "value": 0.5833333333333333,
+              "count": 2
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 2
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 2
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 2
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 2
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 2
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 2
+            }
+          },
+          "unanswerable": {
+            "normalized_exact_match": {
+              "value": null,
+              "count": 0
+            },
+            "key_fact_coverage": {
+              "value": null,
+              "count": 0
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": null,
+              "count": 0
+            },
+            "off_topic_rate": {
+              "value": null,
+              "count": 0
+            },
+            "citation_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": null,
+              "count": 0
+            },
+            "document_accuracy": {
+              "value": null,
+              "count": 0
+            },
+            "page_accuracy": {
+              "value": null,
+              "count": 0
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "false_answer_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "fabricated_citation_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          },
+          "prompt_injection": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 1
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "answer_relevance": {
+              "value": 0.75,
+              "count": 1
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 1
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 1
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 1
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 1
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 1
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 1
+            }
+          }
+        },
+        "denominators": {
+          "all_questions": 36,
+          "answerable_questions": 35,
+          "unanswerable_questions": 1,
+          "metric_counts_are_reported_per_metric": true
+        }
+      },
+      "B": {
+        "all": {
+          "normalized_exact_match": {
+            "value": 0.0,
+            "count": 35
+          },
+          "key_fact_coverage": {
+            "value": 0.2571428571428571,
+            "count": 35
+          },
+          "claim_support_rate": {
+            "value": 0.13809523809523808,
+            "count": 35
+          },
+          "claim_contradiction_rate": {
+            "value": 0.05714285714285714,
+            "count": 35
+          },
+          "claim_not_enough_evidence_rate": {
+            "value": 0.8047619047619047,
+            "count": 35
+          },
+          "reference_correct_claim_rate": {
+            "value": 0.9,
+            "count": 10
+          },
+          "reference_claim_contradiction_rate": {
+            "value": 0.1,
+            "count": 10
+          },
+          "reference_claim_not_evaluated_rate": {
+            "value": 0.7333333333333333,
+            "count": 35
+          },
+          "answer_relevance": {
+            "value": 0.699297052154195,
+            "count": 35
+          },
+          "off_topic_rate": {
+            "value": 0.0,
+            "count": 35
+          },
+          "citation_precision": {
+            "value": 1.0,
+            "count": 35
+          },
+          "citation_claim_support_precision": {
+            "value": 0.2,
+            "count": 35
+          },
+          "citation_recall": {
+            "value": 1.0,
+            "count": 35
+          },
+          "document_accuracy": {
+            "value": 1.0,
+            "count": 35
+          },
+          "page_accuracy": {
+            "value": 1.0,
+            "count": 35
+          },
+          "structural_validity_rate": {
+            "value": 1.0,
+            "count": 35
+          },
+          "correct_abstention_rate": {
+            "value": 1.0,
+            "count": 1
+          },
+          "false_answer_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "fabricated_citation_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "unsupported_claim_rate": {
+            "value": 0.8619047619047618,
+            "count": 35
+          }
+        },
+        "answerable": {
+          "normalized_exact_match": {
+            "value": 0.0,
+            "count": 35
+          },
+          "key_fact_coverage": {
+            "value": 0.2571428571428571,
+            "count": 35
+          },
+          "claim_support_rate": {
+            "value": 0.13809523809523808,
+            "count": 35
+          },
+          "claim_contradiction_rate": {
+            "value": 0.05714285714285714,
+            "count": 35
+          },
+          "claim_not_enough_evidence_rate": {
+            "value": 0.8047619047619047,
+            "count": 35
+          },
+          "reference_correct_claim_rate": {
+            "value": 0.9,
+            "count": 10
+          },
+          "reference_claim_contradiction_rate": {
+            "value": 0.1,
+            "count": 10
+          },
+          "reference_claim_not_evaluated_rate": {
+            "value": 0.7333333333333333,
+            "count": 35
+          },
+          "answer_relevance": {
+            "value": 0.699297052154195,
+            "count": 35
+          },
+          "off_topic_rate": {
+            "value": 0.0,
+            "count": 35
+          },
+          "citation_precision": {
+            "value": 1.0,
+            "count": 35
+          },
+          "citation_claim_support_precision": {
+            "value": 0.2,
+            "count": 35
+          },
+          "citation_recall": {
+            "value": 1.0,
+            "count": 35
+          },
+          "document_accuracy": {
+            "value": 1.0,
+            "count": 35
+          },
+          "page_accuracy": {
+            "value": 1.0,
+            "count": 35
+          },
+          "structural_validity_rate": {
+            "value": 1.0,
+            "count": 35
+          },
+          "correct_abstention_rate": {
+            "value": null,
+            "count": 0
+          },
+          "false_answer_rate": {
+            "value": null,
+            "count": 0
+          },
+          "fabricated_citation_rate": {
+            "value": null,
+            "count": 0
+          },
+          "unsupported_claim_rate": {
+            "value": 0.8619047619047618,
+            "count": 35
+          }
+        },
+        "unanswerable": {
+          "normalized_exact_match": {
+            "value": null,
+            "count": 0
+          },
+          "key_fact_coverage": {
+            "value": null,
+            "count": 0
+          },
+          "claim_support_rate": {
+            "value": null,
+            "count": 0
+          },
+          "claim_contradiction_rate": {
+            "value": null,
+            "count": 0
+          },
+          "claim_not_enough_evidence_rate": {
+            "value": null,
+            "count": 0
+          },
+          "reference_correct_claim_rate": {
+            "value": null,
+            "count": 0
+          },
+          "reference_claim_contradiction_rate": {
+            "value": null,
+            "count": 0
+          },
+          "reference_claim_not_evaluated_rate": {
+            "value": null,
+            "count": 0
+          },
+          "answer_relevance": {
+            "value": null,
+            "count": 0
+          },
+          "off_topic_rate": {
+            "value": null,
+            "count": 0
+          },
+          "citation_precision": {
+            "value": null,
+            "count": 0
+          },
+          "citation_claim_support_precision": {
+            "value": null,
+            "count": 0
+          },
+          "citation_recall": {
+            "value": null,
+            "count": 0
+          },
+          "document_accuracy": {
+            "value": null,
+            "count": 0
+          },
+          "page_accuracy": {
+            "value": null,
+            "count": 0
+          },
+          "structural_validity_rate": {
+            "value": null,
+            "count": 0
+          },
+          "correct_abstention_rate": {
+            "value": 1.0,
+            "count": 1
+          },
+          "false_answer_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "fabricated_citation_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "unsupported_claim_rate": {
+            "value": null,
+            "count": 0
+          }
+        },
+        "by_category": {
+          "direct_factual": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 7
+            },
+            "key_fact_coverage": {
+              "value": 0.14285714285714285,
+              "count": 7
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 7
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 7
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 7
+            },
+            "reference_correct_claim_rate": {
+              "value": 0.5,
+              "count": 2
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.5,
+              "count": 2
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.7142857142857143,
+              "count": 7
+            },
+            "answer_relevance": {
+              "value": 0.8353174603174603,
+              "count": 7
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 7
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 7
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 7
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 7
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 7
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 7
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 7
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 7
+            }
+          },
+          "attendance_eligibility": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 5
+            },
+            "key_fact_coverage": {
+              "value": 0.4,
+              "count": 5
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 5
+            },
+            "claim_contradiction_rate": {
+              "value": 0.4,
+              "count": 5
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 0.6,
+              "count": 5
+            },
+            "reference_correct_claim_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.6,
+              "count": 5
+            },
+            "answer_relevance": {
+              "value": 0.5557142857142857,
+              "count": 5
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 5
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 5
+            },
+            "citation_claim_support_precision": {
+              "value": 0.4,
+              "count": 5
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 5
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 5
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 5
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 5
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 5
+            }
+          },
+          "assessment_calculation": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 5
+            },
+            "key_fact_coverage": {
+              "value": 0.6,
+              "count": 5
+            },
+            "claim_support_rate": {
+              "value": 0.06666666666666667,
+              "count": 5
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 5
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 0.9333333333333332,
+              "count": 5
+            },
+            "reference_correct_claim_rate": {
+              "value": 1.0,
+              "count": 3
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 3
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.5333333333333333,
+              "count": 5
+            },
+            "answer_relevance": {
+              "value": 0.7188095238095238,
+              "count": 5
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 5
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 5
+            },
+            "citation_claim_support_precision": {
+              "value": 0.1,
+              "count": 5
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 5
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 5
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 5
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 5
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 0.9333333333333332,
+              "count": 5
+            }
+          },
+          "grading_sgpa_cgpa": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 4
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_support_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "answer_relevance": {
+              "value": 0.7125,
+              "count": 4
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 4
+            },
+            "citation_claim_support_precision": {
+              "value": 1.0,
+              "count": 4
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 4
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 4
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 4
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 0.0,
+              "count": 4
+            }
+          },
+          "backlogs_supplementary": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 4
+            },
+            "key_fact_coverage": {
+              "value": 0.5,
+              "count": 4
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "reference_correct_claim_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.5,
+              "count": 4
+            },
+            "answer_relevance": {
+              "value": 0.6666666666666667,
+              "count": 4
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 4
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 4
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 4
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 4
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 4
+            }
+          },
+          "lateral_entry_progression": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 4
+            },
+            "key_fact_coverage": {
+              "value": 0.25,
+              "count": 4
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "reference_correct_claim_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.75,
+              "count": 4
+            },
+            "answer_relevance": {
+              "value": 0.7805555555555556,
+              "count": 4
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 4
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 4
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 4
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 4
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 4
+            }
+          },
+          "multi_passage": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 3
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 3
+            },
+            "claim_support_rate": {
+              "value": 0.16666666666666666,
+              "count": 3
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 3
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 0.8333333333333334,
+              "count": 3
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 1.0,
+              "count": 3
+            },
+            "answer_relevance": {
+              "value": 0.5666666666666667,
+              "count": 3
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 3
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 3
+            },
+            "citation_claim_support_precision": {
+              "value": 0.16666666666666666,
+              "count": 3
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 3
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 3
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 3
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 3
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 0.8333333333333334,
+              "count": 3
+            }
+          },
+          "multi_document": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 2
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 2
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "answer_relevance": {
+              "value": 0.5833333333333333,
+              "count": 2
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 2
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 2
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 2
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 2
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 2
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 2
+            }
+          },
+          "unanswerable": {
+            "normalized_exact_match": {
+              "value": null,
+              "count": 0
+            },
+            "key_fact_coverage": {
+              "value": null,
+              "count": 0
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": null,
+              "count": 0
+            },
+            "off_topic_rate": {
+              "value": null,
+              "count": 0
+            },
+            "citation_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": null,
+              "count": 0
+            },
+            "document_accuracy": {
+              "value": null,
+              "count": 0
+            },
+            "page_accuracy": {
+              "value": null,
+              "count": 0
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "false_answer_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "fabricated_citation_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          },
+          "prompt_injection": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 1
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "answer_relevance": {
+              "value": 0.75,
+              "count": 1
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 1
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 1
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 1
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 1
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 1
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 1
+            }
+          }
+        },
+        "denominators": {
+          "all_questions": 36,
+          "answerable_questions": 35,
+          "unanswerable_questions": 1,
+          "metric_counts_are_reported_per_metric": true
+        }
+      },
+      "C": {
+        "all": {
+          "normalized_exact_match": {
+            "value": 0.0,
+            "count": 35
+          },
+          "key_fact_coverage": {
+            "value": 0.2571428571428571,
+            "count": 35
+          },
+          "claim_support_rate": {
+            "value": 0.13809523809523808,
+            "count": 35
+          },
+          "claim_contradiction_rate": {
+            "value": 0.05714285714285714,
+            "count": 35
+          },
+          "claim_not_enough_evidence_rate": {
+            "value": 0.8047619047619047,
+            "count": 35
+          },
+          "reference_correct_claim_rate": {
+            "value": 0.9,
+            "count": 10
+          },
+          "reference_claim_contradiction_rate": {
+            "value": 0.1,
+            "count": 10
+          },
+          "reference_claim_not_evaluated_rate": {
+            "value": 0.7333333333333333,
+            "count": 35
+          },
+          "answer_relevance": {
+            "value": 0.699297052154195,
+            "count": 35
+          },
+          "off_topic_rate": {
+            "value": 0.0,
+            "count": 35
+          },
+          "citation_precision": {
+            "value": 1.0,
+            "count": 35
+          },
+          "citation_claim_support_precision": {
+            "value": 0.2,
+            "count": 35
+          },
+          "citation_recall": {
+            "value": 1.0,
+            "count": 35
+          },
+          "document_accuracy": {
+            "value": 1.0,
+            "count": 35
+          },
+          "page_accuracy": {
+            "value": 1.0,
+            "count": 35
+          },
+          "structural_validity_rate": {
+            "value": 1.0,
+            "count": 35
+          },
+          "correct_abstention_rate": {
+            "value": 1.0,
+            "count": 1
+          },
+          "false_answer_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "fabricated_citation_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "unsupported_claim_rate": {
+            "value": 0.8619047619047618,
+            "count": 35
+          }
+        },
+        "answerable": {
+          "normalized_exact_match": {
+            "value": 0.0,
+            "count": 35
+          },
+          "key_fact_coverage": {
+            "value": 0.2571428571428571,
+            "count": 35
+          },
+          "claim_support_rate": {
+            "value": 0.13809523809523808,
+            "count": 35
+          },
+          "claim_contradiction_rate": {
+            "value": 0.05714285714285714,
+            "count": 35
+          },
+          "claim_not_enough_evidence_rate": {
+            "value": 0.8047619047619047,
+            "count": 35
+          },
+          "reference_correct_claim_rate": {
+            "value": 0.9,
+            "count": 10
+          },
+          "reference_claim_contradiction_rate": {
+            "value": 0.1,
+            "count": 10
+          },
+          "reference_claim_not_evaluated_rate": {
+            "value": 0.7333333333333333,
+            "count": 35
+          },
+          "answer_relevance": {
+            "value": 0.699297052154195,
+            "count": 35
+          },
+          "off_topic_rate": {
+            "value": 0.0,
+            "count": 35
+          },
+          "citation_precision": {
+            "value": 1.0,
+            "count": 35
+          },
+          "citation_claim_support_precision": {
+            "value": 0.2,
+            "count": 35
+          },
+          "citation_recall": {
+            "value": 1.0,
+            "count": 35
+          },
+          "document_accuracy": {
+            "value": 1.0,
+            "count": 35
+          },
+          "page_accuracy": {
+            "value": 1.0,
+            "count": 35
+          },
+          "structural_validity_rate": {
+            "value": 1.0,
+            "count": 35
+          },
+          "correct_abstention_rate": {
+            "value": null,
+            "count": 0
+          },
+          "false_answer_rate": {
+            "value": null,
+            "count": 0
+          },
+          "fabricated_citation_rate": {
+            "value": null,
+            "count": 0
+          },
+          "unsupported_claim_rate": {
+            "value": 0.8619047619047618,
+            "count": 35
+          }
+        },
+        "unanswerable": {
+          "normalized_exact_match": {
+            "value": null,
+            "count": 0
+          },
+          "key_fact_coverage": {
+            "value": null,
+            "count": 0
+          },
+          "claim_support_rate": {
+            "value": null,
+            "count": 0
+          },
+          "claim_contradiction_rate": {
+            "value": null,
+            "count": 0
+          },
+          "claim_not_enough_evidence_rate": {
+            "value": null,
+            "count": 0
+          },
+          "reference_correct_claim_rate": {
+            "value": null,
+            "count": 0
+          },
+          "reference_claim_contradiction_rate": {
+            "value": null,
+            "count": 0
+          },
+          "reference_claim_not_evaluated_rate": {
+            "value": null,
+            "count": 0
+          },
+          "answer_relevance": {
+            "value": null,
+            "count": 0
+          },
+          "off_topic_rate": {
+            "value": null,
+            "count": 0
+          },
+          "citation_precision": {
+            "value": null,
+            "count": 0
+          },
+          "citation_claim_support_precision": {
+            "value": null,
+            "count": 0
+          },
+          "citation_recall": {
+            "value": null,
+            "count": 0
+          },
+          "document_accuracy": {
+            "value": null,
+            "count": 0
+          },
+          "page_accuracy": {
+            "value": null,
+            "count": 0
+          },
+          "structural_validity_rate": {
+            "value": null,
+            "count": 0
+          },
+          "correct_abstention_rate": {
+            "value": 1.0,
+            "count": 1
+          },
+          "false_answer_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "fabricated_citation_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "unsupported_claim_rate": {
+            "value": null,
+            "count": 0
+          }
+        },
+        "by_category": {
+          "direct_factual": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 7
+            },
+            "key_fact_coverage": {
+              "value": 0.14285714285714285,
+              "count": 7
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 7
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 7
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 7
+            },
+            "reference_correct_claim_rate": {
+              "value": 0.5,
+              "count": 2
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.5,
+              "count": 2
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.7142857142857143,
+              "count": 7
+            },
+            "answer_relevance": {
+              "value": 0.8353174603174603,
+              "count": 7
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 7
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 7
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 7
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 7
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 7
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 7
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 7
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 7
+            }
+          },
+          "attendance_eligibility": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 5
+            },
+            "key_fact_coverage": {
+              "value": 0.4,
+              "count": 5
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 5
+            },
+            "claim_contradiction_rate": {
+              "value": 0.4,
+              "count": 5
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 0.6,
+              "count": 5
+            },
+            "reference_correct_claim_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.6,
+              "count": 5
+            },
+            "answer_relevance": {
+              "value": 0.5557142857142857,
+              "count": 5
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 5
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 5
+            },
+            "citation_claim_support_precision": {
+              "value": 0.4,
+              "count": 5
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 5
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 5
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 5
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 5
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 5
+            }
+          },
+          "assessment_calculation": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 5
+            },
+            "key_fact_coverage": {
+              "value": 0.6,
+              "count": 5
+            },
+            "claim_support_rate": {
+              "value": 0.06666666666666667,
+              "count": 5
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 5
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 0.9333333333333332,
+              "count": 5
+            },
+            "reference_correct_claim_rate": {
+              "value": 1.0,
+              "count": 3
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 3
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.5333333333333333,
+              "count": 5
+            },
+            "answer_relevance": {
+              "value": 0.7188095238095238,
+              "count": 5
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 5
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 5
+            },
+            "citation_claim_support_precision": {
+              "value": 0.1,
+              "count": 5
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 5
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 5
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 5
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 5
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 0.9333333333333332,
+              "count": 5
+            }
+          },
+          "grading_sgpa_cgpa": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 4
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_support_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "answer_relevance": {
+              "value": 0.7125,
+              "count": 4
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 4
+            },
+            "citation_claim_support_precision": {
+              "value": 1.0,
+              "count": 4
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 4
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 4
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 4
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 0.0,
+              "count": 4
+            }
+          },
+          "backlogs_supplementary": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 4
+            },
+            "key_fact_coverage": {
+              "value": 0.5,
+              "count": 4
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "reference_correct_claim_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.5,
+              "count": 4
+            },
+            "answer_relevance": {
+              "value": 0.6666666666666667,
+              "count": 4
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 4
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 4
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 4
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 4
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 4
+            }
+          },
+          "lateral_entry_progression": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 4
+            },
+            "key_fact_coverage": {
+              "value": 0.25,
+              "count": 4
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "reference_correct_claim_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.75,
+              "count": 4
+            },
+            "answer_relevance": {
+              "value": 0.7805555555555556,
+              "count": 4
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 4
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 4
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 4
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 4
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 4
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 4
+            }
+          },
+          "multi_passage": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 3
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 3
+            },
+            "claim_support_rate": {
+              "value": 0.16666666666666666,
+              "count": 3
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 3
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 0.8333333333333334,
+              "count": 3
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 1.0,
+              "count": 3
+            },
+            "answer_relevance": {
+              "value": 0.5666666666666667,
+              "count": 3
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 3
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 3
+            },
+            "citation_claim_support_precision": {
+              "value": 0.16666666666666666,
+              "count": 3
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 3
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 3
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 3
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 3
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 0.8333333333333334,
+              "count": 3
+            }
+          },
+          "multi_document": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 2
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 2
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "answer_relevance": {
+              "value": 0.5833333333333333,
+              "count": 2
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 2
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 2
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 2
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 2
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 2
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 2
+            }
+          },
+          "unanswerable": {
+            "normalized_exact_match": {
+              "value": null,
+              "count": 0
+            },
+            "key_fact_coverage": {
+              "value": null,
+              "count": 0
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": null,
+              "count": 0
+            },
+            "off_topic_rate": {
+              "value": null,
+              "count": 0
+            },
+            "citation_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": null,
+              "count": 0
+            },
+            "document_accuracy": {
+              "value": null,
+              "count": 0
+            },
+            "page_accuracy": {
+              "value": null,
+              "count": 0
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "false_answer_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "fabricated_citation_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          },
+          "prompt_injection": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 1
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "answer_relevance": {
+              "value": 0.75,
+              "count": 1
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "citation_precision": {
+              "value": 1.0,
+              "count": 1
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 1
+            },
+            "citation_recall": {
+              "value": 1.0,
+              "count": 1
+            },
+            "document_accuracy": {
+              "value": 1.0,
+              "count": 1
+            },
+            "page_accuracy": {
+              "value": 1.0,
+              "count": 1
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 1
+            }
+          }
+        },
+        "denominators": {
+          "all_questions": 36,
+          "answerable_questions": 35,
+          "unanswerable_questions": 1,
+          "metric_counts_are_reported_per_metric": true
+        }
+      }
+    },
+    "END_TO_END_RAG": {
+      "A": {
+        "all": {
+          "normalized_exact_match": {
+            "value": 0.0,
+            "count": 35
+          },
+          "key_fact_coverage": {
+            "value": 0.05714285714285714,
+            "count": 35
+          },
+          "claim_support_rate": {
+            "value": 0.1,
+            "count": 5
+          },
+          "claim_contradiction_rate": {
+            "value": 0.0,
+            "count": 5
+          },
+          "claim_not_enough_evidence_rate": {
+            "value": 0.9,
+            "count": 5
+          },
+          "reference_correct_claim_rate": {
+            "value": 1.0,
+            "count": 2
+          },
+          "reference_claim_contradiction_rate": {
+            "value": 0.0,
+            "count": 2
+          },
+          "reference_claim_not_evaluated_rate": {
+            "value": 0.7,
+            "count": 5
+          },
+          "answer_relevance": {
+            "value": 0.13301587301587303,
+            "count": 35
+          },
+          "off_topic_rate": {
+            "value": 0.0,
+            "count": 35
+          },
+          "citation_precision": {
+            "value": 0.14285714285714285,
+            "count": 35
+          },
+          "citation_claim_support_precision": {
+            "value": 0.2,
+            "count": 5
+          },
+          "citation_recall": {
+            "value": 0.12857142857142856,
+            "count": 35
+          },
+          "document_accuracy": {
+            "value": 0.14285714285714285,
+            "count": 35
+          },
+          "page_accuracy": {
+            "value": 0.14285714285714285,
+            "count": 35
+          },
+          "structural_validity_rate": {
+            "value": 1.0,
+            "count": 5
+          },
+          "correct_abstention_rate": {
+            "value": 1.0,
+            "count": 1
+          },
+          "false_answer_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "fabricated_citation_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "unsupported_claim_rate": {
+            "value": 0.9,
+            "count": 5
+          }
+        },
+        "answerable": {
+          "normalized_exact_match": {
+            "value": 0.0,
+            "count": 35
+          },
+          "key_fact_coverage": {
+            "value": 0.05714285714285714,
+            "count": 35
+          },
+          "claim_support_rate": {
+            "value": 0.1,
+            "count": 5
+          },
+          "claim_contradiction_rate": {
+            "value": 0.0,
+            "count": 5
+          },
+          "claim_not_enough_evidence_rate": {
+            "value": 0.9,
+            "count": 5
+          },
+          "reference_correct_claim_rate": {
+            "value": 1.0,
+            "count": 2
+          },
+          "reference_claim_contradiction_rate": {
+            "value": 0.0,
+            "count": 2
+          },
+          "reference_claim_not_evaluated_rate": {
+            "value": 0.7,
+            "count": 5
+          },
+          "answer_relevance": {
+            "value": 0.13301587301587303,
+            "count": 35
+          },
+          "off_topic_rate": {
+            "value": 0.0,
+            "count": 35
+          },
+          "citation_precision": {
+            "value": 0.14285714285714285,
+            "count": 35
+          },
+          "citation_claim_support_precision": {
+            "value": 0.2,
+            "count": 5
+          },
+          "citation_recall": {
+            "value": 0.12857142857142856,
+            "count": 35
+          },
+          "document_accuracy": {
+            "value": 0.14285714285714285,
+            "count": 35
+          },
+          "page_accuracy": {
+            "value": 0.14285714285714285,
+            "count": 35
+          },
+          "structural_validity_rate": {
+            "value": 1.0,
+            "count": 5
+          },
+          "correct_abstention_rate": {
+            "value": null,
+            "count": 0
+          },
+          "false_answer_rate": {
+            "value": null,
+            "count": 0
+          },
+          "fabricated_citation_rate": {
+            "value": null,
+            "count": 0
+          },
+          "unsupported_claim_rate": {
+            "value": 0.9,
+            "count": 5
+          }
+        },
+        "unanswerable": {
+          "normalized_exact_match": {
+            "value": null,
+            "count": 0
+          },
+          "key_fact_coverage": {
+            "value": null,
+            "count": 0
+          },
+          "claim_support_rate": {
+            "value": null,
+            "count": 0
+          },
+          "claim_contradiction_rate": {
+            "value": null,
+            "count": 0
+          },
+          "claim_not_enough_evidence_rate": {
+            "value": null,
+            "count": 0
+          },
+          "reference_correct_claim_rate": {
+            "value": null,
+            "count": 0
+          },
+          "reference_claim_contradiction_rate": {
+            "value": null,
+            "count": 0
+          },
+          "reference_claim_not_evaluated_rate": {
+            "value": null,
+            "count": 0
+          },
+          "answer_relevance": {
+            "value": null,
+            "count": 0
+          },
+          "off_topic_rate": {
+            "value": null,
+            "count": 0
+          },
+          "citation_precision": {
+            "value": null,
+            "count": 0
+          },
+          "citation_claim_support_precision": {
+            "value": null,
+            "count": 0
+          },
+          "citation_recall": {
+            "value": null,
+            "count": 0
+          },
+          "document_accuracy": {
+            "value": null,
+            "count": 0
+          },
+          "page_accuracy": {
+            "value": null,
+            "count": 0
+          },
+          "structural_validity_rate": {
+            "value": null,
+            "count": 0
+          },
+          "correct_abstention_rate": {
+            "value": 1.0,
+            "count": 1
+          },
+          "false_answer_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "fabricated_citation_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "unsupported_claim_rate": {
+            "value": null,
+            "count": 0
+          }
+        },
+        "by_category": {
+          "direct_factual": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 7
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 7
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "answer_relevance": {
+              "value": 0.14285714285714285,
+              "count": 7
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 7
+            },
+            "citation_precision": {
+              "value": 0.14285714285714285,
+              "count": 7
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 1
+            },
+            "citation_recall": {
+              "value": 0.14285714285714285,
+              "count": 7
+            },
+            "document_accuracy": {
+              "value": 0.14285714285714285,
+              "count": 7
+            },
+            "page_accuracy": {
+              "value": 0.14285714285714285,
+              "count": 7
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 1
+            }
+          },
+          "attendance_eligibility": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 5
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 5
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": 0.0,
+              "count": 5
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 5
+            },
+            "citation_precision": {
+              "value": 0.0,
+              "count": 5
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": 0.0,
+              "count": 5
+            },
+            "document_accuracy": {
+              "value": 0.0,
+              "count": 5
+            },
+            "page_accuracy": {
+              "value": 0.0,
+              "count": 5
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          },
+          "assessment_calculation": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 5
+            },
+            "key_fact_coverage": {
+              "value": 0.2,
+              "count": 5
+            },
+            "claim_support_rate": {
+              "value": 0.5,
+              "count": 1
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 0.5,
+              "count": 1
+            },
+            "reference_correct_claim_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.5,
+              "count": 1
+            },
+            "answer_relevance": {
+              "value": 0.17333333333333334,
+              "count": 5
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 5
+            },
+            "citation_precision": {
+              "value": 0.2,
+              "count": 5
+            },
+            "citation_claim_support_precision": {
+              "value": 1.0,
+              "count": 1
+            },
+            "citation_recall": {
+              "value": 0.1,
+              "count": 5
+            },
+            "document_accuracy": {
+              "value": 0.2,
+              "count": 5
+            },
+            "page_accuracy": {
+              "value": 0.2,
+              "count": 5
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 0.5,
+              "count": 1
+            }
+          },
+          "grading_sgpa_cgpa": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 4
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": 0.0,
+              "count": 4
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_precision": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": 0.0,
+              "count": 4
+            },
+            "document_accuracy": {
+              "value": 0.0,
+              "count": 4
+            },
+            "page_accuracy": {
+              "value": 0.0,
+              "count": 4
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          },
+          "backlogs_supplementary": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 4
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "answer_relevance": {
+              "value": 0.25,
+              "count": 4
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_precision": {
+              "value": 0.25,
+              "count": 4
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 1
+            },
+            "citation_recall": {
+              "value": 0.25,
+              "count": 4
+            },
+            "document_accuracy": {
+              "value": 0.25,
+              "count": 4
+            },
+            "page_accuracy": {
+              "value": 0.25,
+              "count": 4
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 1
+            }
+          },
+          "lateral_entry_progression": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 4
+            },
+            "key_fact_coverage": {
+              "value": 0.25,
+              "count": 4
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "reference_correct_claim_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.5,
+              "count": 2
+            },
+            "answer_relevance": {
+              "value": 0.4472222222222222,
+              "count": 4
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_precision": {
+              "value": 0.5,
+              "count": 4
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 2
+            },
+            "citation_recall": {
+              "value": 0.5,
+              "count": 4
+            },
+            "document_accuracy": {
+              "value": 0.5,
+              "count": 4
+            },
+            "page_accuracy": {
+              "value": 0.5,
+              "count": 4
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 2
+            }
+          },
+          "multi_passage": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 3
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 3
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": 0.0,
+              "count": 3
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 3
+            },
+            "citation_precision": {
+              "value": 0.0,
+              "count": 3
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": 0.0,
+              "count": 3
+            },
+            "document_accuracy": {
+              "value": 0.0,
+              "count": 3
+            },
+            "page_accuracy": {
+              "value": 0.0,
+              "count": 3
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          },
+          "multi_document": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 2
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 2
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": 0.0,
+              "count": 2
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "citation_precision": {
+              "value": 0.0,
+              "count": 2
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": 0.0,
+              "count": 2
+            },
+            "document_accuracy": {
+              "value": 0.0,
+              "count": 2
+            },
+            "page_accuracy": {
+              "value": 0.0,
+              "count": 2
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          },
+          "unanswerable": {
+            "normalized_exact_match": {
+              "value": null,
+              "count": 0
+            },
+            "key_fact_coverage": {
+              "value": null,
+              "count": 0
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": null,
+              "count": 0
+            },
+            "off_topic_rate": {
+              "value": null,
+              "count": 0
+            },
+            "citation_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": null,
+              "count": 0
+            },
+            "document_accuracy": {
+              "value": null,
+              "count": 0
+            },
+            "page_accuracy": {
+              "value": null,
+              "count": 0
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "false_answer_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "fabricated_citation_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          },
+          "prompt_injection": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 1
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": 0.0,
+              "count": 1
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "citation_precision": {
+              "value": 0.0,
+              "count": 1
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": 0.0,
+              "count": 1
+            },
+            "document_accuracy": {
+              "value": 0.0,
+              "count": 1
+            },
+            "page_accuracy": {
+              "value": 0.0,
+              "count": 1
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          }
+        },
+        "denominators": {
+          "all_questions": 36,
+          "answerable_questions": 35,
+          "unanswerable_questions": 1,
+          "metric_counts_are_reported_per_metric": true
+        }
+      },
+      "B": {
+        "all": {
+          "normalized_exact_match": {
+            "value": 0.0,
+            "count": 35
+          },
+          "key_fact_coverage": {
+            "value": 0.05714285714285714,
+            "count": 35
+          },
+          "claim_support_rate": {
+            "value": 0.1,
+            "count": 5
+          },
+          "claim_contradiction_rate": {
+            "value": 0.0,
+            "count": 5
+          },
+          "claim_not_enough_evidence_rate": {
+            "value": 0.9,
+            "count": 5
+          },
+          "reference_correct_claim_rate": {
+            "value": 1.0,
+            "count": 2
+          },
+          "reference_claim_contradiction_rate": {
+            "value": 0.0,
+            "count": 2
+          },
+          "reference_claim_not_evaluated_rate": {
+            "value": 0.7,
+            "count": 5
+          },
+          "answer_relevance": {
+            "value": 0.13301587301587303,
+            "count": 35
+          },
+          "off_topic_rate": {
+            "value": 0.0,
+            "count": 35
+          },
+          "citation_precision": {
+            "value": 0.14285714285714285,
+            "count": 35
+          },
+          "citation_claim_support_precision": {
+            "value": 0.2,
+            "count": 5
+          },
+          "citation_recall": {
+            "value": 0.12857142857142856,
+            "count": 35
+          },
+          "document_accuracy": {
+            "value": 0.14285714285714285,
+            "count": 35
+          },
+          "page_accuracy": {
+            "value": 0.14285714285714285,
+            "count": 35
+          },
+          "structural_validity_rate": {
+            "value": 1.0,
+            "count": 5
+          },
+          "correct_abstention_rate": {
+            "value": 1.0,
+            "count": 1
+          },
+          "false_answer_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "fabricated_citation_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "unsupported_claim_rate": {
+            "value": 0.9,
+            "count": 5
+          }
+        },
+        "answerable": {
+          "normalized_exact_match": {
+            "value": 0.0,
+            "count": 35
+          },
+          "key_fact_coverage": {
+            "value": 0.05714285714285714,
+            "count": 35
+          },
+          "claim_support_rate": {
+            "value": 0.1,
+            "count": 5
+          },
+          "claim_contradiction_rate": {
+            "value": 0.0,
+            "count": 5
+          },
+          "claim_not_enough_evidence_rate": {
+            "value": 0.9,
+            "count": 5
+          },
+          "reference_correct_claim_rate": {
+            "value": 1.0,
+            "count": 2
+          },
+          "reference_claim_contradiction_rate": {
+            "value": 0.0,
+            "count": 2
+          },
+          "reference_claim_not_evaluated_rate": {
+            "value": 0.7,
+            "count": 5
+          },
+          "answer_relevance": {
+            "value": 0.13301587301587303,
+            "count": 35
+          },
+          "off_topic_rate": {
+            "value": 0.0,
+            "count": 35
+          },
+          "citation_precision": {
+            "value": 0.14285714285714285,
+            "count": 35
+          },
+          "citation_claim_support_precision": {
+            "value": 0.2,
+            "count": 5
+          },
+          "citation_recall": {
+            "value": 0.12857142857142856,
+            "count": 35
+          },
+          "document_accuracy": {
+            "value": 0.14285714285714285,
+            "count": 35
+          },
+          "page_accuracy": {
+            "value": 0.14285714285714285,
+            "count": 35
+          },
+          "structural_validity_rate": {
+            "value": 1.0,
+            "count": 5
+          },
+          "correct_abstention_rate": {
+            "value": null,
+            "count": 0
+          },
+          "false_answer_rate": {
+            "value": null,
+            "count": 0
+          },
+          "fabricated_citation_rate": {
+            "value": null,
+            "count": 0
+          },
+          "unsupported_claim_rate": {
+            "value": 0.9,
+            "count": 5
+          }
+        },
+        "unanswerable": {
+          "normalized_exact_match": {
+            "value": null,
+            "count": 0
+          },
+          "key_fact_coverage": {
+            "value": null,
+            "count": 0
+          },
+          "claim_support_rate": {
+            "value": null,
+            "count": 0
+          },
+          "claim_contradiction_rate": {
+            "value": null,
+            "count": 0
+          },
+          "claim_not_enough_evidence_rate": {
+            "value": null,
+            "count": 0
+          },
+          "reference_correct_claim_rate": {
+            "value": null,
+            "count": 0
+          },
+          "reference_claim_contradiction_rate": {
+            "value": null,
+            "count": 0
+          },
+          "reference_claim_not_evaluated_rate": {
+            "value": null,
+            "count": 0
+          },
+          "answer_relevance": {
+            "value": null,
+            "count": 0
+          },
+          "off_topic_rate": {
+            "value": null,
+            "count": 0
+          },
+          "citation_precision": {
+            "value": null,
+            "count": 0
+          },
+          "citation_claim_support_precision": {
+            "value": null,
+            "count": 0
+          },
+          "citation_recall": {
+            "value": null,
+            "count": 0
+          },
+          "document_accuracy": {
+            "value": null,
+            "count": 0
+          },
+          "page_accuracy": {
+            "value": null,
+            "count": 0
+          },
+          "structural_validity_rate": {
+            "value": null,
+            "count": 0
+          },
+          "correct_abstention_rate": {
+            "value": 1.0,
+            "count": 1
+          },
+          "false_answer_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "fabricated_citation_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "unsupported_claim_rate": {
+            "value": null,
+            "count": 0
+          }
+        },
+        "by_category": {
+          "direct_factual": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 7
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 7
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "answer_relevance": {
+              "value": 0.14285714285714285,
+              "count": 7
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 7
+            },
+            "citation_precision": {
+              "value": 0.14285714285714285,
+              "count": 7
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 1
+            },
+            "citation_recall": {
+              "value": 0.14285714285714285,
+              "count": 7
+            },
+            "document_accuracy": {
+              "value": 0.14285714285714285,
+              "count": 7
+            },
+            "page_accuracy": {
+              "value": 0.14285714285714285,
+              "count": 7
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 1
+            }
+          },
+          "attendance_eligibility": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 5
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 5
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": 0.0,
+              "count": 5
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 5
+            },
+            "citation_precision": {
+              "value": 0.0,
+              "count": 5
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": 0.0,
+              "count": 5
+            },
+            "document_accuracy": {
+              "value": 0.0,
+              "count": 5
+            },
+            "page_accuracy": {
+              "value": 0.0,
+              "count": 5
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          },
+          "assessment_calculation": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 5
+            },
+            "key_fact_coverage": {
+              "value": 0.2,
+              "count": 5
+            },
+            "claim_support_rate": {
+              "value": 0.5,
+              "count": 1
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 0.5,
+              "count": 1
+            },
+            "reference_correct_claim_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.5,
+              "count": 1
+            },
+            "answer_relevance": {
+              "value": 0.17333333333333334,
+              "count": 5
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 5
+            },
+            "citation_precision": {
+              "value": 0.2,
+              "count": 5
+            },
+            "citation_claim_support_precision": {
+              "value": 1.0,
+              "count": 1
+            },
+            "citation_recall": {
+              "value": 0.1,
+              "count": 5
+            },
+            "document_accuracy": {
+              "value": 0.2,
+              "count": 5
+            },
+            "page_accuracy": {
+              "value": 0.2,
+              "count": 5
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 0.5,
+              "count": 1
+            }
+          },
+          "grading_sgpa_cgpa": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 4
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": 0.0,
+              "count": 4
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_precision": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": 0.0,
+              "count": 4
+            },
+            "document_accuracy": {
+              "value": 0.0,
+              "count": 4
+            },
+            "page_accuracy": {
+              "value": 0.0,
+              "count": 4
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          },
+          "backlogs_supplementary": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 4
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "answer_relevance": {
+              "value": 0.25,
+              "count": 4
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_precision": {
+              "value": 0.25,
+              "count": 4
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 1
+            },
+            "citation_recall": {
+              "value": 0.25,
+              "count": 4
+            },
+            "document_accuracy": {
+              "value": 0.25,
+              "count": 4
+            },
+            "page_accuracy": {
+              "value": 0.25,
+              "count": 4
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 1
+            }
+          },
+          "lateral_entry_progression": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 4
+            },
+            "key_fact_coverage": {
+              "value": 0.25,
+              "count": 4
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "reference_correct_claim_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.5,
+              "count": 2
+            },
+            "answer_relevance": {
+              "value": 0.4472222222222222,
+              "count": 4
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_precision": {
+              "value": 0.5,
+              "count": 4
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 2
+            },
+            "citation_recall": {
+              "value": 0.5,
+              "count": 4
+            },
+            "document_accuracy": {
+              "value": 0.5,
+              "count": 4
+            },
+            "page_accuracy": {
+              "value": 0.5,
+              "count": 4
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 2
+            }
+          },
+          "multi_passage": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 3
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 3
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": 0.0,
+              "count": 3
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 3
+            },
+            "citation_precision": {
+              "value": 0.0,
+              "count": 3
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": 0.0,
+              "count": 3
+            },
+            "document_accuracy": {
+              "value": 0.0,
+              "count": 3
+            },
+            "page_accuracy": {
+              "value": 0.0,
+              "count": 3
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          },
+          "multi_document": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 2
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 2
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": 0.0,
+              "count": 2
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "citation_precision": {
+              "value": 0.0,
+              "count": 2
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": 0.0,
+              "count": 2
+            },
+            "document_accuracy": {
+              "value": 0.0,
+              "count": 2
+            },
+            "page_accuracy": {
+              "value": 0.0,
+              "count": 2
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          },
+          "unanswerable": {
+            "normalized_exact_match": {
+              "value": null,
+              "count": 0
+            },
+            "key_fact_coverage": {
+              "value": null,
+              "count": 0
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": null,
+              "count": 0
+            },
+            "off_topic_rate": {
+              "value": null,
+              "count": 0
+            },
+            "citation_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": null,
+              "count": 0
+            },
+            "document_accuracy": {
+              "value": null,
+              "count": 0
+            },
+            "page_accuracy": {
+              "value": null,
+              "count": 0
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "false_answer_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "fabricated_citation_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          },
+          "prompt_injection": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 1
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": 0.0,
+              "count": 1
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "citation_precision": {
+              "value": 0.0,
+              "count": 1
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": 0.0,
+              "count": 1
+            },
+            "document_accuracy": {
+              "value": 0.0,
+              "count": 1
+            },
+            "page_accuracy": {
+              "value": 0.0,
+              "count": 1
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          }
+        },
+        "denominators": {
+          "all_questions": 36,
+          "answerable_questions": 35,
+          "unanswerable_questions": 1,
+          "metric_counts_are_reported_per_metric": true
+        }
+      },
+      "C": {
+        "all": {
+          "normalized_exact_match": {
+            "value": 0.0,
+            "count": 35
+          },
+          "key_fact_coverage": {
+            "value": 0.05714285714285714,
+            "count": 35
+          },
+          "claim_support_rate": {
+            "value": 0.1,
+            "count": 5
+          },
+          "claim_contradiction_rate": {
+            "value": 0.0,
+            "count": 5
+          },
+          "claim_not_enough_evidence_rate": {
+            "value": 0.9,
+            "count": 5
+          },
+          "reference_correct_claim_rate": {
+            "value": 1.0,
+            "count": 2
+          },
+          "reference_claim_contradiction_rate": {
+            "value": 0.0,
+            "count": 2
+          },
+          "reference_claim_not_evaluated_rate": {
+            "value": 0.7,
+            "count": 5
+          },
+          "answer_relevance": {
+            "value": 0.13301587301587303,
+            "count": 35
+          },
+          "off_topic_rate": {
+            "value": 0.0,
+            "count": 35
+          },
+          "citation_precision": {
+            "value": 0.14285714285714285,
+            "count": 35
+          },
+          "citation_claim_support_precision": {
+            "value": 0.2,
+            "count": 5
+          },
+          "citation_recall": {
+            "value": 0.12857142857142856,
+            "count": 35
+          },
+          "document_accuracy": {
+            "value": 0.14285714285714285,
+            "count": 35
+          },
+          "page_accuracy": {
+            "value": 0.14285714285714285,
+            "count": 35
+          },
+          "structural_validity_rate": {
+            "value": 1.0,
+            "count": 5
+          },
+          "correct_abstention_rate": {
+            "value": 1.0,
+            "count": 1
+          },
+          "false_answer_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "fabricated_citation_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "unsupported_claim_rate": {
+            "value": 0.9,
+            "count": 5
+          }
+        },
+        "answerable": {
+          "normalized_exact_match": {
+            "value": 0.0,
+            "count": 35
+          },
+          "key_fact_coverage": {
+            "value": 0.05714285714285714,
+            "count": 35
+          },
+          "claim_support_rate": {
+            "value": 0.1,
+            "count": 5
+          },
+          "claim_contradiction_rate": {
+            "value": 0.0,
+            "count": 5
+          },
+          "claim_not_enough_evidence_rate": {
+            "value": 0.9,
+            "count": 5
+          },
+          "reference_correct_claim_rate": {
+            "value": 1.0,
+            "count": 2
+          },
+          "reference_claim_contradiction_rate": {
+            "value": 0.0,
+            "count": 2
+          },
+          "reference_claim_not_evaluated_rate": {
+            "value": 0.7,
+            "count": 5
+          },
+          "answer_relevance": {
+            "value": 0.13301587301587303,
+            "count": 35
+          },
+          "off_topic_rate": {
+            "value": 0.0,
+            "count": 35
+          },
+          "citation_precision": {
+            "value": 0.14285714285714285,
+            "count": 35
+          },
+          "citation_claim_support_precision": {
+            "value": 0.2,
+            "count": 5
+          },
+          "citation_recall": {
+            "value": 0.12857142857142856,
+            "count": 35
+          },
+          "document_accuracy": {
+            "value": 0.14285714285714285,
+            "count": 35
+          },
+          "page_accuracy": {
+            "value": 0.14285714285714285,
+            "count": 35
+          },
+          "structural_validity_rate": {
+            "value": 1.0,
+            "count": 5
+          },
+          "correct_abstention_rate": {
+            "value": null,
+            "count": 0
+          },
+          "false_answer_rate": {
+            "value": null,
+            "count": 0
+          },
+          "fabricated_citation_rate": {
+            "value": null,
+            "count": 0
+          },
+          "unsupported_claim_rate": {
+            "value": 0.9,
+            "count": 5
+          }
+        },
+        "unanswerable": {
+          "normalized_exact_match": {
+            "value": null,
+            "count": 0
+          },
+          "key_fact_coverage": {
+            "value": null,
+            "count": 0
+          },
+          "claim_support_rate": {
+            "value": null,
+            "count": 0
+          },
+          "claim_contradiction_rate": {
+            "value": null,
+            "count": 0
+          },
+          "claim_not_enough_evidence_rate": {
+            "value": null,
+            "count": 0
+          },
+          "reference_correct_claim_rate": {
+            "value": null,
+            "count": 0
+          },
+          "reference_claim_contradiction_rate": {
+            "value": null,
+            "count": 0
+          },
+          "reference_claim_not_evaluated_rate": {
+            "value": null,
+            "count": 0
+          },
+          "answer_relevance": {
+            "value": null,
+            "count": 0
+          },
+          "off_topic_rate": {
+            "value": null,
+            "count": 0
+          },
+          "citation_precision": {
+            "value": null,
+            "count": 0
+          },
+          "citation_claim_support_precision": {
+            "value": null,
+            "count": 0
+          },
+          "citation_recall": {
+            "value": null,
+            "count": 0
+          },
+          "document_accuracy": {
+            "value": null,
+            "count": 0
+          },
+          "page_accuracy": {
+            "value": null,
+            "count": 0
+          },
+          "structural_validity_rate": {
+            "value": null,
+            "count": 0
+          },
+          "correct_abstention_rate": {
+            "value": 1.0,
+            "count": 1
+          },
+          "false_answer_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "fabricated_citation_rate": {
+            "value": 0.0,
+            "count": 1
+          },
+          "unsupported_claim_rate": {
+            "value": null,
+            "count": 0
+          }
+        },
+        "by_category": {
+          "direct_factual": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 7
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 7
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "answer_relevance": {
+              "value": 0.14285714285714285,
+              "count": 7
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 7
+            },
+            "citation_precision": {
+              "value": 0.14285714285714285,
+              "count": 7
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 1
+            },
+            "citation_recall": {
+              "value": 0.14285714285714285,
+              "count": 7
+            },
+            "document_accuracy": {
+              "value": 0.14285714285714285,
+              "count": 7
+            },
+            "page_accuracy": {
+              "value": 0.14285714285714285,
+              "count": 7
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 1
+            }
+          },
+          "attendance_eligibility": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 5
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 5
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": 0.0,
+              "count": 5
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 5
+            },
+            "citation_precision": {
+              "value": 0.0,
+              "count": 5
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": 0.0,
+              "count": 5
+            },
+            "document_accuracy": {
+              "value": 0.0,
+              "count": 5
+            },
+            "page_accuracy": {
+              "value": 0.0,
+              "count": 5
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          },
+          "assessment_calculation": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 5
+            },
+            "key_fact_coverage": {
+              "value": 0.2,
+              "count": 5
+            },
+            "claim_support_rate": {
+              "value": 0.5,
+              "count": 1
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 0.5,
+              "count": 1
+            },
+            "reference_correct_claim_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.5,
+              "count": 1
+            },
+            "answer_relevance": {
+              "value": 0.17333333333333334,
+              "count": 5
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 5
+            },
+            "citation_precision": {
+              "value": 0.2,
+              "count": 5
+            },
+            "citation_claim_support_precision": {
+              "value": 1.0,
+              "count": 1
+            },
+            "citation_recall": {
+              "value": 0.1,
+              "count": 5
+            },
+            "document_accuracy": {
+              "value": 0.2,
+              "count": 5
+            },
+            "page_accuracy": {
+              "value": 0.2,
+              "count": 5
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 0.5,
+              "count": 1
+            }
+          },
+          "grading_sgpa_cgpa": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 4
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": 0.0,
+              "count": 4
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_precision": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": 0.0,
+              "count": 4
+            },
+            "document_accuracy": {
+              "value": 0.0,
+              "count": 4
+            },
+            "page_accuracy": {
+              "value": 0.0,
+              "count": 4
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          },
+          "backlogs_supplementary": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 4
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 4
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "answer_relevance": {
+              "value": 0.25,
+              "count": 4
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_precision": {
+              "value": 0.25,
+              "count": 4
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 1
+            },
+            "citation_recall": {
+              "value": 0.25,
+              "count": 4
+            },
+            "document_accuracy": {
+              "value": 0.25,
+              "count": 4
+            },
+            "page_accuracy": {
+              "value": 0.25,
+              "count": 4
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 1
+            }
+          },
+          "lateral_entry_progression": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 4
+            },
+            "key_fact_coverage": {
+              "value": 0.25,
+              "count": 4
+            },
+            "claim_support_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "reference_correct_claim_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "reference_claim_contradiction_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": 0.5,
+              "count": 2
+            },
+            "answer_relevance": {
+              "value": 0.4472222222222222,
+              "count": 4
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 4
+            },
+            "citation_precision": {
+              "value": 0.5,
+              "count": 4
+            },
+            "citation_claim_support_precision": {
+              "value": 0.0,
+              "count": 2
+            },
+            "citation_recall": {
+              "value": 0.5,
+              "count": 4
+            },
+            "document_accuracy": {
+              "value": 0.5,
+              "count": 4
+            },
+            "page_accuracy": {
+              "value": 0.5,
+              "count": 4
+            },
+            "structural_validity_rate": {
+              "value": 1.0,
+              "count": 2
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": 1.0,
+              "count": 2
+            }
+          },
+          "multi_passage": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 3
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 3
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": 0.0,
+              "count": 3
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 3
+            },
+            "citation_precision": {
+              "value": 0.0,
+              "count": 3
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": 0.0,
+              "count": 3
+            },
+            "document_accuracy": {
+              "value": 0.0,
+              "count": 3
+            },
+            "page_accuracy": {
+              "value": 0.0,
+              "count": 3
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          },
+          "multi_document": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 2
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 2
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": 0.0,
+              "count": 2
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 2
+            },
+            "citation_precision": {
+              "value": 0.0,
+              "count": 2
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": 0.0,
+              "count": 2
+            },
+            "document_accuracy": {
+              "value": 0.0,
+              "count": 2
+            },
+            "page_accuracy": {
+              "value": 0.0,
+              "count": 2
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          },
+          "unanswerable": {
+            "normalized_exact_match": {
+              "value": null,
+              "count": 0
+            },
+            "key_fact_coverage": {
+              "value": null,
+              "count": 0
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": null,
+              "count": 0
+            },
+            "off_topic_rate": {
+              "value": null,
+              "count": 0
+            },
+            "citation_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": null,
+              "count": 0
+            },
+            "document_accuracy": {
+              "value": null,
+              "count": 0
+            },
+            "page_accuracy": {
+              "value": null,
+              "count": 0
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": 1.0,
+              "count": 1
+            },
+            "false_answer_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "fabricated_citation_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          },
+          "prompt_injection": {
+            "normalized_exact_match": {
+              "value": 0.0,
+              "count": 1
+            },
+            "key_fact_coverage": {
+              "value": 0.0,
+              "count": 1
+            },
+            "claim_support_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "claim_not_enough_evidence_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_correct_claim_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_contradiction_rate": {
+              "value": null,
+              "count": 0
+            },
+            "reference_claim_not_evaluated_rate": {
+              "value": null,
+              "count": 0
+            },
+            "answer_relevance": {
+              "value": 0.0,
+              "count": 1
+            },
+            "off_topic_rate": {
+              "value": 0.0,
+              "count": 1
+            },
+            "citation_precision": {
+              "value": 0.0,
+              "count": 1
+            },
+            "citation_claim_support_precision": {
+              "value": null,
+              "count": 0
+            },
+            "citation_recall": {
+              "value": 0.0,
+              "count": 1
+            },
+            "document_accuracy": {
+              "value": 0.0,
+              "count": 1
+            },
+            "page_accuracy": {
+              "value": 0.0,
+              "count": 1
+            },
+            "structural_validity_rate": {
+              "value": null,
+              "count": 0
+            },
+            "correct_abstention_rate": {
+              "value": null,
+              "count": 0
+            },
+            "false_answer_rate": {
+              "value": null,
+              "count": 0
+            },
+            "fabricated_citation_rate": {
+              "value": null,
+              "count": 0
+            },
+            "unsupported_claim_rate": {
+              "value": null,
+              "count": 0
+            }
+          }
+        },
+        "denominators": {
+          "all_questions": 36,
+          "answerable_questions": 35,
+          "unanswerable_questions": 1,
+          "metric_counts_are_reported_per_metric": true
+        }
+      }
+    }
+  },
+  "artifacts": {
+    "master_questions_sha256": "06d5731d923e69d48aa1724edee63f01e80b14958c65207c7bb77fc74ae12158",
+    "primary_manifest_sha256": "03544709fa49d5004a3c46251645efc6a9e0a12b80e97e84305d430df6b5cab2",
+    "prompt_comparison_json": "results\\synthetic_prompt_comparison.json",
+    "prompt_comparison_markdown": "results\\synthetic_prompt_comparison.md"
+  },
+  "limitations": [
+    "All policies, documents and questions are project-authored synthetic data, not university regulations.",
+    "Only development questions were used for the diagnostic run; synthetic held-out questions were not used for tuning or scoring in this run.",
+    "Conflict scenarios are kept in a separate corpus and were validated, not merged into the primary current-policy index.",
+    "Generation uses a deterministic extractive mock that does not interpret the existing A/B/C prompts.",
+    "Retrieval uses deterministic-tfidf-hash-v1 embeddings; production text-embedding-3-small performance is unverified.",
+    "Automated exact-span and lexical checks do not establish semantic faithfulness or policy correctness."
+  ]
+}

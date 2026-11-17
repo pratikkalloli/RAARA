@@ -1,0 +1,72 @@
+{
+  "config_version": "7E.1",
+  "classification": "EVALUATION FRAMEWORK COMPLETE — LIVE EXPERIMENTS PENDING",
+  "development_dataset": {
+    "path": "evaluation/datasets/development/raara_synthetic_starter_v0.1.0.jsonl",
+    "version": "0.1.0",
+    "question_count": 12,
+    "source_classification": "synthetic; not official regulations",
+    "sha256": "db97d1d3d6d723fbdaea7a641dd1f37e988f48abd099145b903af61e5883bf8a",
+    "manifest_sha256": "f85a5e15f2dc4193c468f34e25bf249cfd50cb6a24d071359427d4c21234ecf7"
+  },
+  "held_out": {
+    "status": "NOT AVAILABLE",
+    "question_count": 0,
+    "scoring_status": "BLOCKED",
+    "rule": "Do not copy or relabel development questions as held-out."
+  },
+  "retrieval": {
+    "top_k_values": [1, 3, 5],
+    "production_default_top_k": 5,
+    "relevance_threshold": 0.35,
+    "distance_metric": "cosine",
+    "chunk_size_tokens": 700,
+    "chunk_overlap_tokens": 100,
+    "configured_embedding_model": "text-embedding-3-small",
+    "offline_embedding_used": "deterministic-tfidf-hash-v1",
+    "storage": "temporary isolated ChromaDB",
+    "production_settings_modified": false
+  },
+  "generation": {
+    "configured_model_setting": "OPENAI_CHAT_MODEL",
+    "configured_project_default": "gpt-4.1-mini",
+    "offline_generator_used": "deterministic-extractive-mock-v1",
+    "prompt_types": ["A", "B", "C"],
+    "prompt_definition_source": "app/prompting/system_prompt.py",
+    "shared_output_schema": "StructuredAnswer",
+    "input_tokens": null,
+    "output_tokens": null,
+    "total_tokens": null,
+    "estimated_api_cost_usd": null
+  },
+  "experiment_conditions": {
+    "CONTROLLED_EVIDENCE": "gold-aligned evidence, retrieval bypassed",
+    "END_TO_END_RAG": "one retrieval per question, shared by A/B/C",
+    "prompt_only_variable": "system prompt configuration",
+    "live_openai_authorized": false,
+    "live_openai_calls": 0,
+    "automatic_startup_execution": false
+  },
+  "future_live_gate": {
+    "opt_in_env": "RAARA_ENABLE_LIVE_EVAL=true",
+    "required_env": [
+      "OPENAI_API_KEY",
+      "RAARA_EVAL_MODEL",
+      "RAARA_EVAL_MAX_CALLS",
+      "RAARA_EVAL_MAX_BUDGET_USD"
+    ],
+    "checker_module": "evaluation.live_eval_gate.inspect_live_eval_readiness",
+    "network_requests_by_readiness_checker": 0,
+    "pricing_snapshot": null
+  },
+  "report_sources": [
+    "PHASE_6E_ACCEPTANCE_REPORT.md",
+    "PHASE_7A_REPORT.md",
+    "PHASE_7B_REPORT.md",
+    "PHASE_7C_REPORT.md",
+    "PHASE_7D_REPORT.md",
+    "evaluation/results/retrieval_benchmark.json",
+    "evaluation/results/answer_quality_benchmark.json",
+    "evaluation/results/prompt_comparison.json"
+  ]
+}

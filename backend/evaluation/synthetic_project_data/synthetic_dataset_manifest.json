@@ -1,0 +1,259 @@
+{
+  "dataset_version": "9A.1.0",
+  "dataset_type": "SYNTHETIC_PROJECT_DATA",
+  "is_official_university_policy": false,
+  "source_type": "PROJECT_AUTHORED",
+  "description": "Project-authored synthetic academic model based on user-provided values and explicitly labelled defaults. Not official PES policy.",
+  "documents": [
+    {
+      "document_id": "SYNTH-P9A-STRUCTURE-01",
+      "document_name": "Academic Structure and Programme Regulations",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-STRUCTURE-01.pdf",
+      "source_markdown": "corpus/01_programme_structure.md",
+      "page_count": 1,
+      "sha256": "c8ebb609647e0267c86e282b622d4a2a91d27457ac07e0cfeb3eda124cb0ca08"
+    },
+    {
+      "document_id": "SYNTH-P9A-LATERAL-02",
+      "document_name": "Lateral Entry and Mathematics Bridge Policy",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-LATERAL-02.pdf",
+      "source_markdown": "corpus/02_lateral_entry_bridge.md",
+      "page_count": 1,
+      "sha256": "8cd9c3ac15145e452e865ffdecf27e660ce6b474a9918b41454bb8ab16a6ca78"
+    },
+    {
+      "document_id": "SYNTH-P9A-PROGRESSION-REG-03",
+      "document_name": "Regular-Entry Academic Progression and Year-Back Policy",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-PROGRESSION-REG-03.pdf",
+      "source_markdown": "corpus/03_progression_regular.md",
+      "page_count": 1,
+      "sha256": "2b2e4b91a3e646ab31a7427bf7203fca0bbb44d81830db8b6bff54f79287d629"
+    },
+    {
+      "document_id": "SYNTH-P9A-PROGRESSION-LAT-04",
+      "document_name": "Lateral-Entry Academic Progression and Year-Back Policy",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-PROGRESSION-LAT-04.pdf",
+      "source_markdown": "corpus/04_progression_lateral.md",
+      "page_count": 1,
+      "sha256": "e0de2b2cb8783b9831e240b351e0be36bc3a32d22a457624595e98353b32d571"
+    },
+    {
+      "document_id": "SYNTH-P9A-ATTENDANCE-05",
+      "document_name": "Attendance and ESA Eligibility Policy",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-ATTENDANCE-05.pdf",
+      "source_markdown": "corpus/05_attendance_eligibility.md",
+      "page_count": 1,
+      "sha256": "d1c3c741ccae3dbe0a1947e69b57370d5451edfa5ec80cdae64485c849937b0b"
+    },
+    {
+      "document_id": "SYNTH-P9A-ASSESSMENT-06",
+      "document_name": "ISA, ESA and Laboratory Assessment Policy",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-ASSESSMENT-06.pdf",
+      "source_markdown": "corpus/06_assessment_scheme.md",
+      "page_count": 1,
+      "sha256": "b7724c61f3891ac3dcca52ccd39e5c740c0086cc5390f2f153f9302a73ed2a76"
+    },
+    {
+      "document_id": "SYNTH-P9A-GRADING-07",
+      "document_name": "Grading and Grade Point Policy",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-GRADING-07.pdf",
+      "source_markdown": "corpus/07_grading.md",
+      "page_count": 1,
+      "sha256": "fb86546ba2909e6daeb8f47fd0c9ccd81618da043bb90cc729c3d894b43173f9"
+    },
+    {
+      "document_id": "SYNTH-P9A-SGPA-08",
+      "document_name": "SGPA and CGPA Calculation Policy",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-SGPA-08.pdf",
+      "source_markdown": "corpus/08_sgpa_cgpa.md",
+      "page_count": 1,
+      "sha256": "590e02f1299ace3fd2ba32d83623509296e53f204ac3e4d950af83c3dcef8dc1"
+    },
+    {
+      "document_id": "SYNTH-P9A-BACKLOG-09",
+      "document_name": "Backlog and Supplementary Examination Policy",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-BACKLOG-09.pdf",
+      "source_markdown": "corpus/09_backlog_supplementary.md",
+      "page_count": 1,
+      "sha256": "c525c9b9b253766f3a402891b3596b9fa5ab0a31e0a180c97c5e8bbc23258b33"
+    },
+    {
+      "document_id": "SYNTH-P9A-REVALUATION-10",
+      "document_name": "Revaluation, Answer-Script Inspection and Examination Procedures",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-REVALUATION-10.pdf",
+      "source_markdown": "corpus/10_revaluation_exam_procedures.md",
+      "page_count": 1,
+      "sha256": "62d16c53794b78ae93b848894cc98aa8924c616472f3814b9385355c674e02d8"
+    }
+  ]
+}

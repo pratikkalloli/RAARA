@@ -1,0 +1,40 @@
+node_modules/
+dist/
+.venv/
+venv/
+.venv311/
+.venv-wsl311/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+chroma_data/
+uploads/
+documents/raw/
+.npm-cache/
+frontend/dist/
+backend/.raara_live_acceptance_*/
+# All environment files and secrets
+.env.*
+!.env.example
+!.env.example.*
+
+# Python and tool caches
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Chroma and local data
+chroma/
+chroma_data/
+*.sqlite-wal
+*.sqlite-shm
+
+# Secret and certificate files
+*.pem
+*.key

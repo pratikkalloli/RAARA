@@ -1,0 +1,315 @@
+{
+  "dataset_version": "9A.1.0",
+  "dataset_type": "SYNTHETIC_PROJECT_DATA",
+  "is_official_university_policy": false,
+  "source_type": "PROJECT_AUTHORED",
+  "description": "Isolated older project-authored versions for controlled conflict/version tests; never mixed into the primary current corpus.",
+  "documents": [
+    {
+      "document_id": "SYNTH-P9A-STRUCTURE-01",
+      "document_name": "Academic Structure and Programme Regulations",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-STRUCTURE-01.pdf",
+      "source_markdown": "corpus/01_programme_structure.md",
+      "page_count": 1,
+      "sha256": "1ba924311d0dbecef15a660616c7c0f2e23ae41a4d0b8e00f804c58ff48d3e49"
+    },
+    {
+      "document_id": "SYNTH-P9A-LATERAL-02",
+      "document_name": "Lateral Entry and Mathematics Bridge Policy",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-LATERAL-02.pdf",
+      "source_markdown": "corpus/02_lateral_entry_bridge.md",
+      "page_count": 1,
+      "sha256": "056138ec52b0956779664ce2a60fc9622813b28db27e742102ba13243718c959"
+    },
+    {
+      "document_id": "SYNTH-P9A-PROGRESSION-REG-03",
+      "document_name": "Regular-Entry Academic Progression and Year-Back Policy",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-PROGRESSION-REG-03.pdf",
+      "source_markdown": "corpus/03_progression_regular.md",
+      "page_count": 1,
+      "sha256": "2ca55978f61484482db641afed4c0a4e6cbd75d741af452e633c6b432506595a"
+    },
+    {
+      "document_id": "SYNTH-P9A-PROGRESSION-LAT-04",
+      "document_name": "Lateral-Entry Academic Progression and Year-Back Policy",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-PROGRESSION-LAT-04.pdf",
+      "source_markdown": "corpus/04_progression_lateral.md",
+      "page_count": 1,
+      "sha256": "325e4025a88ce635cd1aecfbd62dd812a7ee81ba20dcc2838e458e2ccf1a85ca"
+    },
+    {
+      "document_id": "SYNTH-P9A-ATTENDANCE-05",
+      "document_name": "Attendance and ESA Eligibility Policy",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-ATTENDANCE-05.pdf",
+      "source_markdown": "corpus/05_attendance_eligibility.md",
+      "page_count": 1,
+      "sha256": "4969d7af86d4d6bb7d08ad537cf2b7342e2197c16d23aeb1251491df3cc97301"
+    },
+    {
+      "document_id": "SYNTH-P9A-ASSESSMENT-06",
+      "document_name": "ISA, ESA and Laboratory Assessment Policy",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-ASSESSMENT-06.pdf",
+      "source_markdown": "corpus/06_assessment_scheme.md",
+      "page_count": 1,
+      "sha256": "a173c91c9fb83ca787dc6f713b4d7c3600d39ec58aa04447fe2d57e45f4db224"
+    },
+    {
+      "document_id": "SYNTH-P9A-GRADING-07",
+      "document_name": "Grading and Grade Point Policy",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-GRADING-07.pdf",
+      "source_markdown": "corpus/07_grading.md",
+      "page_count": 1,
+      "sha256": "a1a9af2dc85d3b22321d07aa57ea0d19262e364a5a1b38086fb42ef02b6c327a"
+    },
+    {
+      "document_id": "SYNTH-P9A-SGPA-08",
+      "document_name": "SGPA and CGPA Calculation Policy",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-SGPA-08.pdf",
+      "source_markdown": "corpus/08_sgpa_cgpa.md",
+      "page_count": 1,
+      "sha256": "339d593afbfa260826692dab18ffed9b97893ae3e2fe900b773dfde7e7e790a2"
+    },
+    {
+      "document_id": "SYNTH-P9A-BACKLOG-09",
+      "document_name": "Backlog and Supplementary Examination Policy",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-BACKLOG-09.pdf",
+      "source_markdown": "corpus/09_backlog_supplementary.md",
+      "page_count": 1,
+      "sha256": "359fdeb92f0abd43fc74371a468564ec911ad4f0b58d0eb71062eef15ce7f5d8"
+    },
+    {
+      "document_id": "SYNTH-P9A-REVALUATION-10",
+      "document_name": "Revaluation, Answer-Script Inspection and Examination Procedures",
+      "version": "1.0",
+      "effective_date": "2026-09-01",
+      "academic_year": "2026-27",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "corpus/pdfs/SYNTH-P9A-REVALUATION-10.pdf",
+      "source_markdown": "corpus/10_revaluation_exam_procedures.md",
+      "page_count": 1,
+      "sha256": "51d31d61ee9ecac0d9838e65ee217d0ad4abd3e44a7b01f06ced0ad1519861e2"
+    },
+    {
+      "document_id": "SYNTH-P9A-ATTENDANCE-OLD-C01",
+      "document_name": "Superseded Attendance Policy v0.9",
+      "version": "0.9",
+      "effective_date": "2025-09-01",
+      "academic_year": "2025-26",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "conflicts/pdfs/SYNTH-P9A-ATTENDANCE-OLD-C01.pdf",
+      "source_markdown": "conflicts/older_attendance_v0.9.md",
+      "page_count": 1,
+      "sha256": "fac91df9ad60979ba7f0334e2dd232a7bcaf91f9858dfa03b8714c58be3d20db",
+      "supersedes_document_id": null,
+      "superseded_by_document_id": "SYNTH-P9A-ATTENDANCE-05",
+      "status": "SUPERSEDED_SYNTHETIC_FIXTURE"
+    },
+    {
+      "document_id": "SYNTH-P9A-ASSESSMENT-OLD-C02",
+      "document_name": "Superseded Assessment Scheme v0.9",
+      "version": "0.9",
+      "effective_date": "2025-09-01",
+      "academic_year": "2025-26",
+      "source_type": "PROJECT_AUTHORED",
+      "dataset_type": "SYNTHETIC_PROJECT_DATA",
+      "dataset_version": "9A.1.0",
+      "is_official_university_policy": false,
+      "applicable_programme": "Project-model B.Tech",
+      "applicable_campus": [
+        "Ring Road (synthetic model)",
+        "Electronic City (synthetic model)"
+      ],
+      "applicable_admission_batches": [
+        "Project-model cohorts; not a university batch designation"
+      ],
+      "synthetic": true,
+      "official_regulation": false,
+      "path": "conflicts/pdfs/SYNTH-P9A-ASSESSMENT-OLD-C02.pdf",
+      "source_markdown": "conflicts/older_assessment_v0.9.md",
+      "page_count": 1,
+      "sha256": "21681eff803f742582460dbbae8f83c0d01376075c65647e5e31dc016592d526",
+      "supersedes_document_id": null,
+      "superseded_by_document_id": "SYNTH-P9A-ASSESSMENT-06",
+      "status": "SUPERSEDED_SYNTHETIC_FIXTURE"
+    }
+  ]
+}
